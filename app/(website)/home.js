@@ -1,13 +1,24 @@
+"use client";
+import { useRef } from "react";
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
+import Hero from "@/components/hero";
+import Player from "@/components/player";
+import Payment from "@/components/payment";
+import HowToBuy from "@/components/howtobuy";
 
-export default function Post({ posts }) {
+export default function Home({ data }) {
+  const playerRef = useRef(null);
   return (
     <>
-      {posts && (
+      {data && (
         <Container>
-          <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
+          <Hero hero={data} playerRef={playerRef} />
+          <Player ref={playerRef} />
+          <Payment />
+          <HowToBuy />
+          {/* <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
             {posts.slice(0, 2).map(post => (
               <PostList
                 key={post._id}
@@ -28,7 +39,7 @@ export default function Post({ posts }) {
               className="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300">
               <span>View all Posts</span>
             </Link>
-          </div>
+          </div> */}
         </Container>
       )}
     </>

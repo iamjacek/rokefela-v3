@@ -1,6 +1,3 @@
-const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -9,21 +6,24 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ["Rubik-Regular", "Roboto", "Sans-serif"],
+      serif: [
+        "ArchivoCondensed-ExtraBold",
+        "Georgia",
+        "Times New Roman"
+      ],
+      mono: ["Orbitron-Regular", "Liberation Mono", "Courier New"],
+      button: ["Orbitron-Bold", "Liberation Mono", "Courier New"],
+      bold: ["Rubik-Bold", "Roboto", "Sans-serif"],
+      subtitle: ["Archivo-ExtraLight", "Georgia", "Times New Roman"],
+      msg: ["Satoshi", "Rubik-Regular", "Sans-serif"]
+    },
     extend: {
       colors: {
-        gray: colors.neutral
-      },
-      fontFamily: {
-        // to change, update font in _document.js
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
-        serif: ["var(--font-lora)", ...defaultTheme.fontFamily.serif],
-        stock: [defaultTheme.fontFamily.sans]
-      },
-      aspectRatio: {
-        "4/3": "4 / 3",
-        "3/2": "3 / 2",
-        "2/3": "2 / 3",
-        "9/16": "9 / 16"
+        brand: "#450467",
+        rokefelaBlack: "#0E0D0E",
+        dimmed: "rgb(var(--color-dimmed) / .5)"
       }
     }
   },

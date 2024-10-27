@@ -7,3 +7,261 @@
 /*! purgecss end ignore */
 
 /*Custom Styles Here*/
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+@layer base {
+  :root {
+    --color-dimmed: 69 4 103;
+  }
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("/fonts/Satoshi-Regular.woff") format("woff"),
+    url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ArchivoCondensed-ExtraBold";
+  src:
+    url("/fonts/ArchivoCondensed-ExtraBold.woff2") format("woff2"),
+    url("/fonts/ArchivoCondensed-ExtraBold.woff") format("woff"),
+    url("/fonts/ArchivoCondensed-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo-ExtraLight";
+  src:
+    url("/fonts/Archivo-ExtraLight.woff2") format("woff2"),
+    url("/fonts/Archivo-ExtraLight.woff") format("woff"),
+    url("/fonts/Archivo-ExtraLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron-Bold";
+  src:
+    url("/fonts/Orbitron-Bold.woff2") format("woff2"),
+    url("/fonts/Orbitron-Bold.woff") format("woff"),
+    url("/fonts/Orbitron-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron-Regular";
+  src:
+    url("/fonts/Orbitron-Regular.woff2") format("woff2"),
+    url("/fonts/Orbitron-Regular.woff") format("woff"),
+    url("/fonts/Orbitron-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik-Regular";
+  src:
+    url("/fonts/Rubik-Regular.woff2") format("woff2"),
+    url("/fonts/Rubik-Regular.woff") format("woff"),
+    url("/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik-Bold";
+  src:
+    url("/fonts/Rubik-Bold.woff2") format("woff2"),
+    url("/fonts/Rubik-Bold.woff") format("woff"),
+    url("/fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* alice carousel style overwriting */
+.alice-carousel__dots-item {
+  border-radius: unset !important;
+  background: transparent !important;
+  border: 2px #fff solid;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.alice-carousel__dots-item.__active {
+  border-radius: unset !important;
+  background: #fff !important;
+  border: 2px #fff solid;
+}
+
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+  margin-right: 5px !important;
+}
+
+/* BUTTON ANIMATION */
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  display: block;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: transform 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.btn:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.button-transition {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  width: 100%;
+  height: 0%;
+  background: white;
+  z-index: -1;
+}
+
+.main-button {
+  top: 40px;
+  cursor: hand;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  background: #220531;
+  z-index: 10;
+  border: 2px solid white;
+  @media only screen and (min-width: 640px) {
+    border: 3px solid white;
+  }
+}
+
+.main-button:hover {
+  border: 2px solid white;
+  color: #fff;
+  animation-name: color-button-animate;
+  animation-duration: 0.8s;
+
+  @media only screen and (min-width: 640px) {
+    animation-name: color-button-animate-big;
+    border: 3px solid white;
+  }
+}
+
+.main-button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #450467;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.main-button::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #fff;
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  transition: all 0.2s 0.25s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.main-button:hover::before {
+  opacity: 1;
+  width: 116%;
+}
+
+.main-button:hover::after {
+  opacity: 1;
+  width: 120%;
+  transition-delay: 0s;
+}
+
+@keyframes color-button-animate {
+  0% {
+    color: white;
+    border: 2px solid white;
+  }
+  20% {
+    color: #522d52;
+    border: 2px solid #450467;
+  }
+  51% {
+    color: white;
+    border: 2px solid white;
+  }
+  100% {
+    color: white;
+    border: 2px solid white;
+  }
+}
+
+@keyframes color-button-animate-big {
+  0% {
+    color: white;
+    border: 3px solid white;
+  }
+  20% {
+    color: #522d52;
+    border: 3px solid #450467;
+  }
+  51% {
+    color: white;
+    border: 3px solid white;
+  }
+  100% {
+    color: white;
+    border: 3px solid white;
+  }
+}
