@@ -9,8 +9,9 @@ import Payment from "@/components/payment";
 import HowToBuy from "@/components/howtobuy";
 import Pricing from "@/components/pricing";
 import Streaming from "@/components/streaming";
+import FAQ from "@/components/faq";
 
-export default function Home({ hero, pricing }) {
+export default function Home({ hero, pricing, faq }) {
   const playerRef = useRef(null);
   return (
     <>
@@ -21,7 +22,7 @@ export default function Home({ hero, pricing }) {
         <HowToBuy />
         {pricing && <Pricing pricing={pricing} />}
         <Streaming />
-
+        <FAQ faq={faq} />
         {/* <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
             {posts.slice(0, 2).map(post => (
               <PostList

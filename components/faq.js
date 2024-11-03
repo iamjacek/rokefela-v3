@@ -1,0 +1,87 @@
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+const Accordion = ({
+  title,
+  content,
+  isOpen,
+  index,
+  handleOpening
+}) => {
+  const [openThisCard, setOpenThisCard] = useState(false);
+
+  useEffect(() => {
+    if (index === isOpen) {
+      setOpenThisCard(true);
+    } else {
+      setOpenThisCard(false);
+    }
+  }, [isOpen]);
+
+  const handleClick = () => {
+    if (openThisCard) {
+      handleOpening(false);
+    } else {
+      handleOpening(index);
+    }
+  };
+
+  return (
+    <div className="relative w-full max-w-5xl">
+      <div
+        onClick={handleClick}
+        className="my-2 flex min-h-[60px] w-full cursor-pointer items-center justify-items-start bg-brand bg-opacity-[45%] py-4 pl-6 pr-20">
+        <h3 className="font-serif text-base uppercase leading-4 tracking-wider text-white md:text-lg lg:text-xl">
+          {title}
+        </h3>
+        <Image
+          src="/img/chevron.svg"
+          alt="chevron"
+          width={32}
+          height={18}
+          className={`absolute right-6 top-[30px] transition-[transform] delay-200 duration-100 ease-in-out md:top-[31px] ${
+            openThisCard ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </div>
+      <div
+        className={`w-full overflow-hidden px-6 transition-[max-height] duration-300 ease-in-out ${
+          openThisCard ? "max-h-96" : "max-h-0"
+        }`}>
+        <p className="pb-8 pt-4 font-sans text-base tracking-wider text-white lg:text-lg">
+          {content[0].children[0].text}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default function FAQ({ faq }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleSectionOpen = number => {
+    setIsOpen(number);
+  };
+
+  return (
+    <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
+      <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
+        FAQ.
+      </h1>
+      <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5">
+        {faq &&
+          faq[0].data &&
+          faq[0].data.map((el, index) => (
+            <Accordion
+              title={el.title}
+              content={el.content}
+              key={el._key}
+              index={index}
+              isOpen={isOpen}
+              handleOpening={number => handleSectionOpen(number)}
+            />
+          ))}
+      </div>
+    </div>
+  );
+}

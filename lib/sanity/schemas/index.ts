@@ -3,7 +3,8 @@ import category from './category'
 import post from './post'
 import author from './author'
 import settings from './settings'
-import { hero } from './hero'
-import { pricing } from './pricing'
+import hero from './hero'
+import pricing from './pricing'
+import faq from './faq'
 
-export const schemaTypes = [post, author, category, settings, blockContent, hero, pricing]
+export const schemaTypes = [post, author, category, settings, blockContent, hero, pricing, faq]

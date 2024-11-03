@@ -15,7 +15,8 @@ import {
   getAll,
   searchquery,
   allherosquery,
-  allpricingquery
+  allpricingquery,
+  allfaqquery
 } from "./groq";
 import { createClient } from "next-sanity";
 
@@ -144,6 +145,13 @@ export async function getAllHeros() {
 export async function getAllPricing() {
   if (client) {
     return (await client.fetch(allpricingquery)) || [];
+  }
+  return [];
+}
+
+export async function getAllFaq() {
+  if (client) {
+    return (await client.fetch(allfaqquery)) || [];
   }
   return [];
 }
