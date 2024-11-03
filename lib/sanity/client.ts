@@ -14,7 +14,8 @@ import {
   catquery,
   getAll,
   searchquery,
-  allherosquery
+  allherosquery,
+  allpricingquery
 } from "./groq";
 import { createClient } from "next-sanity";
 
@@ -136,6 +137,13 @@ export async function getPaginatedPosts({ limit, pageIndex = 0 }) {
 export async function getAllHeros() {
   if (client) {
     return (await client.fetch(allherosquery)) || [];
+  }
+  return [];
+}
+
+export async function getAllPricing() {
+  if (client) {
+    return (await client.fetch(allpricingquery)) || [];
   }
   return [];
 }

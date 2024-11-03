@@ -8,12 +8,11 @@ export default function Hero({ hero }) {
   const titleText = useRef(null);
 
   useEffect(() => {
-    console.log(hero);
     const interval = setInterval(() => {
       const updatedData = currentIndex + 1;
       titleText.current.style.opacity = 0;
       setTimeout(() => {
-        if (currentIndex === hero[0].names - 1) {
+        if (currentIndex === hero[0].names.length - 1) {
           setCurrentIndex(0);
         } else {
           setCurrentIndex(updatedData);

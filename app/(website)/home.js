@@ -7,18 +7,22 @@ import Hero from "@/components/hero";
 import Player from "@/components/player";
 import Payment from "@/components/payment";
 import HowToBuy from "@/components/howtobuy";
+import Pricing from "@/components/pricing";
+import Streaming from "@/components/streaming";
 
-export default function Home({ data }) {
+export default function Home({ hero, pricing }) {
   const playerRef = useRef(null);
   return (
     <>
-      {data && (
-        <Container>
-          <Hero hero={data} playerRef={playerRef} />
-          <Player ref={playerRef} />
-          <Payment />
-          <HowToBuy />
-          {/* <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
+      <Container>
+        {hero && <Hero hero={hero} playerRef={playerRef} />}
+        <Player ref={playerRef} />
+        <Payment />
+        <HowToBuy />
+        {pricing && <Pricing pricing={pricing} />}
+        <Streaming />
+
+        {/* <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
             {posts.slice(0, 2).map(post => (
               <PostList
                 key={post._id}
@@ -40,8 +44,7 @@ export default function Home({ data }) {
               <span>View all Posts</span>
             </Link>
           </div> */}
-        </Container>
-      )}
+      </Container>
     </>
   );
 }

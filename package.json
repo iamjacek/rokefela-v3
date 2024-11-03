@@ -35,6 +35,7 @@
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
+    "react-alice-carousel": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.3",
     "react-iframe": "^1.8.5",

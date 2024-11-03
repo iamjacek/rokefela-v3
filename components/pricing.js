@@ -1,0 +1,29 @@
+import PriceBox from "@/components/pricebox";
+
+function Pricing({ pricing }) {
+  return (
+    <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
+      <h1 className="z-0 w-full py-10 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
+        Pricing
+      </h1>
+      <h3 className="hidden pb-20 text-center font-sans text-xl tracking-wide text-white md:block lg:max-w-3xl">
+        Some subtitle
+      </h3>
+      <section className="flex w-full max-w-7xl flex-wrap justify-center gap-6">
+        {pricing &&
+          pricing[0].data &&
+          pricing[0].data.map((item, index) => (
+            <PriceBox
+              key={item._key}
+              title={item.title}
+              price={item.price}
+              subtitle={item.subtitle}
+              features={item.features}
+            />
+          ))}
+      </section>
+    </div>
+  );
+}
+
+export default Pricing;
