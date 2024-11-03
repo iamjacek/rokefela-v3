@@ -17,7 +17,8 @@ import {
   allherosquery,
   allpricingquery,
   allfaqquery,
-  alltestimonials
+  alltestimonials,
+  allabout
 } from "./groq";
 import { createClient } from "next-sanity";
 
@@ -160,6 +161,13 @@ export async function getAllFaq() {
 export async function getAllTestimonials() {
   if (client) {
     return (await client.fetch(alltestimonials)) || [];
+  }
+  return [];
+}
+
+export async function getAllAbout() {
+  if (client) {
+    return (await client.fetch(allabout)) || [];
   }
   return [];
 }

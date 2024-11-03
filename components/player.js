@@ -14,10 +14,7 @@ const Player = forwardRef((props, ref) => {
         src="https://player.beatstars.com/?storeId=137947"
         className="max-w-5xl"
         width="100%"
-        height="800">
-        {" "}
-        -- none --{" "}
-      </iframe>
+        height="800"></iframe>
     </div>
   );
 });

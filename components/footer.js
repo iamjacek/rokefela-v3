@@ -1,59 +1,108 @@
-import Container from "@/components/container";
-import ThemeSwitch from "@/components/themeSwitch";
-import Image from "next/image";
-import { myLoader } from "@/utils/all";
+import { FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
+import Link from "next/link";
+
+const footerData = [
+  {
+    title: "TERMS",
+    links: [
+      { text: "Licences", href: "/licences" },
+      { text: "FAQ", href: "/faq" },
+      { text: "ABOUT", href: "/about" },
+      { text: "Contact", href: "/contact" }
+    ]
+  },
+  {
+    title: "LINKS",
+    links: [
+      { text: "Licences", href: "/licences" },
+      { text: "FAQ", href: "/faq" },
+      { text: "ABOUT", href: "/about" },
+      { text: "Contact", href: "/contact" }
+    ]
+  },
+  {
+    title: "FOLLOW ME",
+    links: [
+      { icon: <FiInstagram />, href: "https://www.rokefela.com/" },
+      {
+        icon: <FiYoutube />,
+        href: "https://www.youtube.com/@rokefela"
+      },
+      { icon: <FiTwitter />, href: "https://twitter.com/rokefela" }
+    ]
+  },
+  {
+    title: "BEATS ON YOUTUBE",
+    links: [
+      { text: "DETROIT TYPE BEATS", href: "/licences" },
+      { text: "FEMALE RAP BEATS", href: "/faq" }
+    ]
+  }
+];
+
+const FooterCopyright = () => {
+  return (
+    <div className="flex items-center justify-center bg-brand bg-opacity-[45%] px-5 py-20 text-center md:py-6 lg:justify-between">
+      <div className="ml-6 hidden font-mono text-sm tracking-wider text-white hover:underline lg:block">
+        <Link href="/terms">TERMS OF USE</Link>
+      </div>
+      <div className="font-sans text-base text-lg tracking-wider text-white">
+        &copy; Copyright {new Date().getFullYear()},{` `}
+        <a
+          href="https://rokefela.com"
+          target="__blank"
+          className="text-secondary-dark dark:text-secondary-light font-medium uppercase drop-shadow-md hover:underline">
+          ROKEFELA
+        </a>
+      </div>
+      <div className="mr-6 hidden font-mono text-sm tracking-wider text-white drop-shadow-md hover:underline lg:block">
+        <Link href="/policy">PRIVACY POLICY</Link>
+      </div>
+    </div>
+  );
+};
 
 export default function Footer(props) {
   return (
-    <Container className="mt-10 border-t border-gray-100 dark:border-gray-800">
-      <div className="text-center text-sm">
-        Copyright © {new Date().getFullYear()} {props?.copyright}.
-        All rights reserved.
-      </div>
-      <div className="mt-1 flex justify-center gap-1 text-center text-sm text-gray-500 dark:text-gray-600">
-        <span>
-          {" "}
-          Made by{" "}
-          {/*  // ** 🙏  Can I ask you a favor? 🙏 **
-            // Please do not remove the below link.
-           // It helps us to grow & continue our work. Thank you.
-          // OR Purchase PRO version for commercial license.  */}
-          <a
-            href="https://web3templates.com/?ref=stablo-template"
-            rel="noopener"
-            target="_blank">
-            Web3Templates
-          </a>
-        </span>
-        <span>&middot;</span>
-        <span>
-          {" "}
-          <a
-            href="https://github.com/web3templates/stablo"
-            rel="noopener"
-            target="_blank">
-            Github
-          </a>
-        </span>
-      </div>
-      <div className="mt-2 flex items-center justify-between">
-        <div className="mt-5">
-          <a
-            href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-            target="_blank"
-            rel="noopener"
-            className="relative block w-44">
-            {/* <Image
-              src={VercelLogo}
-              alt="Powered by Vercel"
-              unoptimized={true}
-              width="150"
-              height="25"
-            /> */}
-          </a>
+    <footer className="bg-rokefelaBlack">
+      <div className="sm:pt-30 pt-20">
+        {/* Footer social links */}
+        <div className="mb-12 flex flex-col items-center justify-center px-5 sm:mb-28 md:px-20">
+          <div className="flex w-full flex-wrap gap-4 text-center sm:gap-6">
+            {footerData &&
+              footerData.map((link, i) => (
+                <div
+                  key={i}
+                  className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
+                  <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
+                    {link.title}
+                  </h4>
+                  <div
+                    className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
+                    {link.links &&
+                      link.links.map((el, i) => (
+                        <a
+                          key={i}
+                          href={link.href}
+                          target="__blank"
+                          className="flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline">
+                          {el.text ? (
+                            el.text
+                          ) : (
+                            <i className="mx-4 text-xl sm:text-2xl md:text-3xl">
+                              {el.icon}
+                            </i>
+                          )}
+                        </a>
+                      ))}
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
-        <ThemeSwitch />
+
+        <FooterCopyright />
       </div>
-    </Container>
+    </footer>
   );
 }

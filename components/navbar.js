@@ -1,247 +1,124 @@
 "use client";
-
-import { Fragment } from "react";
-import { Menu, Transition, Disclosure } from "@headlessui/react";
-import Container from "@/components/container";
+import { useState, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { urlForImage } from "@/lib/sanity/image";
-import cx from "clsx";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { myLoader } from "@/utils/all";
+import { FiX, FiMenu } from "react-icons/fi";
+import logoLight from "@/public/img/logo.svg";
 
-export default function Navbar(props) {
-  const leftmenu = [
-    {
-      label: "Home",
-      href: "/"
-    },
-    {
-      label: "About",
-      href: "/about"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
+export const menuItems = [
+  {
+    name: "BEATS",
+    url: "#"
+  },
+  {
+    name: "ABOUT",
+    url: "#"
+  },
+  {
+    name: "FAQ",
+    url: "#"
+  },
+  {
+    name: "CONTACT",
+    url: "/contact"
+  }
+];
+
+function Header() {
+  const [showMenu, setShowMenu] = useState(false);
+  const ref = useRef(null);
+  const delay = 300;
+
+  function toggleMenu() {
+    if (!showMenu) {
+      ref.current.style.display = "flex";
+      setTimeout(() => {
+        setShowMenu(true);
+      });
+    } else {
+      setShowMenu(false);
+      setTimeout(() => {
+        ref.current.style.display = "none";
+      }, delay);
     }
-  ];
-
-  const rightmenu = [
-    {
-      label: "Archive",
-      href: "/archive"
-    },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
-  ];
-
-  const mobilemenu = [...leftmenu, ...rightmenu];
+  }
 
   return (
-    <Container>
-      <nav>
-        <Disclosure>
-          {({ open }) => (
-            <>
-              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
-                  {leftmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
-                </div>
-                <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        {...urlForImage(props.logo)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
-                  </Link>
-                  <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        {...urlForImage(props.logoalt)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
-                  </Link>
-                  <Disclosure.Button
-                    aria-label="Toggle Menu"
-                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none dark:text-gray-300 md:hidden ">
-                    <svg
-                      className="h-6 w-6 fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24">
-                      {open && (
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                        />
-                      )}
-                      {!open && (
-                        <path
-                          fillRule="evenodd"
-                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                        />
-                      )}
-                    </svg>
-                  </Disclosure.Button>
-                </div>
-
-                <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
-                  {rightmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          <span> {item.label}</span>
-                          {item.badge && (
-                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
-                </div>
-              </div>
-              <Disclosure.Panel>
-                <div className="order-2 -ml-4 mt-4 flex w-full flex-col items-center justify-start md:hidden">
-                  {mobilemenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                          mobile={true}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
-                </div>
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-      </nav>
-    </Container>
+    <header
+      className={
+        showMenu ? "fixed z-30 block w-full" : "absolute block w-full"
+      }>
+      {/* Small screen hamburger menu */}
+      <div className="relative z-40 md:hidden">
+        <button
+          onClick={toggleMenu}
+          type="button"
+          className="px-6 py-5 focus:outline-none"
+          aria-label="Hamburger Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="h-7 w-7 fill-white text-white">
+            {showMenu ? (
+              <FiX className="text-3xl" />
+            ) : (
+              <FiMenu className="text-3xl" />
+            )}
+          </svg>
+        </button>
+      </div>
+      {/* desktop menu */}
+      <div className="absolute inset-x-0 top-0 flex hidden justify-center bg-gradient-to-b from-rokefelaBlack from-[-100%] py-6 font-mono md:block">
+        <ul className="flex flex-row justify-center gap-4">
+          {menuItems.map((item, i) => (
+            <li
+              key={i}
+              className="cursor-pointer px-4 py-2 text-center text-lg tracking-widest text-white drop-shadow-md lg:text-xl 2xl:text-2xl">
+              <a href={item.url} className="menuItem relative">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* mobile menu */}
+      <div
+        ref={ref}
+        style={{ display: "none" }}
+        className={`absolute top-0 flex h-screen w-full items-center justify-center bg-rokefelaBlack pb-20 pt-20 font-mono text-white transition-[opacity] duration-300 ease-in-out ${
+          showMenu ? "opacity-100" : "opacity-0"
+        }`}>
+        <ul className="flex flex-col items-center justify-center justify-between">
+          {menuItems.map((item, i) => (
+            <li
+              key={i}
+              className="block cursor-pointer p-2 text-left text-2xl tracking-widest">
+              <Link href={item.url} aria-label={item.name}>
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <style jsx>{`
+        a.menuItem::before {
+          content: "";
+          background: #ec407a;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          background: #fff;
+          transition: 0.2s transform ease;
+          transform: scale3d(0, 1, 1);
+          transform-origin: 0 50%;
+        }
+        a.menuItem:hover::before {
+          transform: scale3d(1, 1, 1);
+        }
+      `}</style>
+    </header>
   );
 }
 
-const DropdownMenu = ({ menu, items, mobile }) => {
-  return (
-    <Menu
-      as="div"
-      className={cx("relative text-left", mobile && "w-full")}>
-      {({ open }) => (
-        <>
-          <Menu.Button
-            className={cx(
-              "flex items-center gap-x-1 rounded-md px-5 py-2 text-sm font-medium  outline-none transition-all focus:outline-none focus-visible:text-indigo-500 focus-visible:ring-1 dark:focus-visible:bg-gray-800",
-              open
-                ? "text-blue-500 hover:text-blue-500"
-                : " text-gray-600 dark:text-gray-400 ",
-              mobile ? "w-full px-4 py-2 " : "inline-block px-4 py-2"
-            )}>
-            <span>{menu.label}</span>
-            <ChevronDownIcon className="mt-0.5 h-4 w-4" />
-          </Menu.Button>
-          <Transition
-            as={Fragment}
-            enter="lg:transition lg:ease-out lg:duration-100"
-            enterFrom="lg:transform lg:opacity-0 lg:scale-95"
-            enterTo="lg:transform lg:opacity-100 lg:scale-100"
-            leave="lg:transition lg:ease-in lg:duration-75"
-            leaveFrom="lg:transform lg:opacity-100 lg:scale-100"
-            leaveTo="lg:transform lg:opacity-0 lg:scale-95">
-            <Menu.Items
-              className={cx(
-                "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
-                !mobile && "bg-white shadow-lg  dark:bg-gray-800"
-              )}>
-              <div className={cx(!mobile && "py-3")}>
-                {items.map((item, index) => (
-                  <Menu.Item as="div" key={`${item.title}${index}`}>
-                    {({ active }) => (
-                      <Link
-                        href={item?.path ? item.path : "#"}
-                        className={cx(
-                          "flex items-center space-x-2 px-5 py-2 text-sm lg:space-x-4",
-                          active
-                            ? "text-blue-500"
-                            : "text-gray-700 hover:text-blue-500 focus:text-blue-500 dark:text-gray-300"
-                        )}>
-                        <span> {item.title}</span>
-                      </Link>
-                    )}
-                  </Menu.Item>
-                ))}
-              </div>
-            </Menu.Items>
-          </Transition>
-        </>
-      )}
-    </Menu>
-  );
-};
+export default Header;

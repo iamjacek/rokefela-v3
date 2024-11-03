@@ -11,8 +11,16 @@ import Pricing from "@/components/pricing";
 import Streaming from "@/components/streaming";
 import FAQ from "@/components/faq";
 import Testimonials from "@/components/testimonials";
+import About from "@/components/about";
+import Contact from "@/components/contact";
 
-export default function Home({ hero, pricing, faq, testimonials }) {
+export default function Home({
+  hero,
+  pricing,
+  faq,
+  testimonials,
+  about
+}) {
   const playerRef = useRef(null);
   return (
     <>
@@ -25,6 +33,8 @@ export default function Home({ hero, pricing, faq, testimonials }) {
         <Streaming />
         {faq && <FAQ faq={faq} />}
         {testimonials && <Testimonials testimonials={testimonials} />}
+        {about && <About playerRef={playerRef} about={about} />}
+        <Contact />
         {/* <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
             {posts.slice(0, 2).map(post => (
               <PostList
