@@ -6,5 +6,6 @@ import settings from './settings'
 import hero from './hero'
 import pricing from './pricing'
 import faq from './faq'
+import testimonials from './testimonials'
 
-export const schemaTypes = [post, author, category, settings, blockContent, hero, pricing, faq]
+export const schemaTypes = [post, author, category, settings, blockContent, hero, pricing, faq, testimonials]
