@@ -63,6 +63,7 @@ const Testimonials = ({ testimonials }) => {
             disableButtonsControls
             autoPlayStrategy="default"
             animationType="fadeout"
+            disableDotsControls
             items={items}
             ref={carousel}
           />

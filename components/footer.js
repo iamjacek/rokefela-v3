@@ -1,6 +1,6 @@
-import { FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
+import { FiInstagram, FiYoutube } from "react-icons/fi";
 import Link from "next/link";
-
+import Image from "next/image";
 const footerData = [
   {
     title: "TERMS",
@@ -23,12 +23,19 @@ const footerData = [
   {
     title: "FOLLOW ME",
     links: [
-      { icon: <FiInstagram />, href: "https://www.rokefela.com/" },
+      {
+        icon: <FiInstagram />,
+        href: "https://www.instagram.com/rokefela_/"
+      },
       {
         icon: <FiYoutube />,
         href: "https://www.youtube.com/@rokefela"
       },
-      { icon: <FiTwitter />, href: "https://twitter.com/rokefela" }
+      {
+        icon: "/img/x.svg",
+        href: "https://twitter.com/rokefela",
+        image: true
+      }
     ]
   },
   {
@@ -83,10 +90,18 @@ export default function Footer(props) {
                       link.links.map((el, i) => (
                         <a
                           key={i}
-                          href={link.href}
+                          href={el.href}
                           target="__blank"
                           className="flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline">
-                          {el.text ? (
+                          {el.image ? (
+                            <Image
+                              src={el.icon}
+                              alt="X"
+                              width={28}
+                              height={28}
+                              className="mx-4 text-xl sm:text-2xl md:text-3xl"
+                            />
+                          ) : el.text ? (
                             el.text
                           ) : (
                             <i className="mx-4 text-xl sm:text-2xl md:text-3xl">
