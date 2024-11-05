@@ -68,6 +68,7 @@ function Streaming() {
       role="presentation"
       width="250"
       height="80"
+      quality={100}
     />
   ));
 
