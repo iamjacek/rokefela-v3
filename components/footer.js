@@ -1,4 +1,4 @@
-import { FiInstagram, FiYoutube } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiYoutube } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 const footerData = [
@@ -28,8 +28,8 @@ const footerData = [
         href: "https://www.instagram.com/rokefela_/"
       },
       {
-        icon: <FiYoutube />,
-        href: "https://www.youtube.com/@rokefela"
+        icon: <FiFacebook />,
+        href: "https://www.facebook.com/Rokefelamusic"
       },
       {
         icon: "/img/x.svg",
@@ -39,7 +39,7 @@ const footerData = [
     ]
   },
   {
-    title: "BEATS ON YOUTUBE",
+    title: "SUBSCRIBE TO MY YOUTUBE CHANNEL",
     links: [
       { text: "DETROIT TYPE BEATS", href: "/licences" },
       { text: "FEMALE RAP BEATS", href: "/faq" }
@@ -104,9 +104,7 @@ export default function Footer(props) {
                           ) : el.text ? (
                             el.text
                           ) : (
-                            <i className="mx-4 text-xl sm:text-2xl md:text-3xl">
-                              {el.icon}
-                            </i>
+                            <i className="mx-4 text-3xl">{el.icon}</i>
                           )}
                         </a>
                       ))}

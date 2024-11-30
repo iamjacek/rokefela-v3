@@ -4,43 +4,43 @@ import Image from "next/image";
 
 const serviceIcons = [
   {
-    src: "/img/amazon-music_service.svg",
+    src: "/img/amazon-music_service.png",
     alt: "amazon music"
   },
   {
-    src: "/img/apple-music_service.svg",
+    src: "/img/apple-music_service.png",
     alt: "apple music"
   },
   {
-    src: "/img/deezer_service.svg",
+    src: "/img/deezer_service.png",
     alt: "deezer"
   },
   {
-    src: "/img/pandora_service.svg",
+    src: "/img/pandora_service.png",
     alt: "pandora premium"
   },
   {
-    src: "/img/qobuz_service.svg",
+    src: "/img/qobuz_service.png",
     alt: "qobuz"
   },
   {
-    src: "/img/spotify_service.svg",
+    src: "/img/spotify_service.png",
     alt: "spotify"
   },
   {
-    src: "/img/tiktok_service.svg",
+    src: "/img/tiktok_service.png",
     alt: "paypal"
   },
   {
-    src: "/img/tidal_service.svg",
+    src: "/img/tidal_service.png",
     alt: "tidal"
   },
   {
-    src: "/img/vevo_service.svg",
+    src: "/img/vevo_service.png",
     alt: "vevo"
   },
   {
-    src: "/img/yt_service.svg",
+    src: "/img/yt_service.png",
     alt: "youtube music"
   }
 ];
@@ -75,7 +75,7 @@ function Streaming() {
   return (
     <section className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <h1 className="z-0 order-1 w-full px-5 py-10 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-        MAKE MONEY FROM YOUR MUSIC.
+        MAKE MONEY FROM YOUR MUSIC
       </h1>
       {serviceIcons && (
         <div className="relative order-2 my-10 w-full max-w-5xl px-5 lg:order-3">

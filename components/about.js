@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Button from "@/components/button";
 import Markdown from "react-markdown";
+import { forwardRef } from "react";
 
-function About({ playerRef, about }) {
+const About = forwardRef((props, ref) => {
+  const { playerRef, about } = props;
+
   return (
-    <section className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
+    <section
+      ref={ref}
+      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <h1 className="z-0 w-full py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
         WHO AM I?
       </h1>
@@ -39,11 +44,11 @@ function About({ playerRef, about }) {
       </div>
       <Button
         playerRef={playerRef}
-        extraStyle="mb-12 py-4 px-20 md:px-24 sm:py-5 md:py-7 sm:px-26 2xl:py-8 2xl:px-14 sm:w-full sm:max-w-[615px] 2xl:max-w-[815px]">
+        extraStyle="mb-12 py-4 px-6 md:px-24 sm:py-5 md:py-7 sm:px-26 2xl:py-8 2xl:px-14 sm:w-full sm:max-w-[615px] 2xl:max-w-[815px]">
         BROWSE BEATS
       </Button>
     </section>
   );
-}
+});
 
 export default About;

@@ -1,10 +1,11 @@
-import HomePage from "./home";
+import Home from "./home";
 import {
   getAllHeros,
   getAllPricing,
   getAllFaq,
   getAllTestimonials,
-  getAllAbout
+  getAllAbout,
+  getSettings
 } from "@/lib/sanity/client";
 
 export default async function IndexPage() {
@@ -13,13 +14,15 @@ export default async function IndexPage() {
   const faq = await getAllFaq();
   const testimonials = await getAllTestimonials();
   const about = await getAllAbout();
+  const settings = await getSettings();
   return (
-    <HomePage
+    <Home
       hero={hero}
       pricing={pricing}
       faq={faq}
       testimonials={testimonials}
       about={about}
+      settings={settings}
     />
   );
 }

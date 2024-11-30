@@ -4,30 +4,29 @@ import Link from "next/link";
 import { FiX, FiMenu } from "react-icons/fi";
 import logoLight from "@/public/img/logo.svg";
 
-export const menuItems = [
-  {
-    name: "BEATS",
-    url: "#"
-  },
-  {
-    name: "ABOUT",
-    url: "#"
-  },
-  {
-    name: "FAQ",
-    url: "#"
-  },
-  {
-    name: "CONTACT",
-    url: "/contact"
-  }
-];
-
-function Header() {
+function Header({ playerRef, aboutRef, faqRef, contactRef }) {
   const [showMenu, setShowMenu] = useState(false);
   const ref = useRef(null);
   const delay = 300;
 
+  const menuItems = [
+    {
+      name: "BEATS",
+      ref: playerRef
+    },
+    {
+      name: "ABOUT",
+      ref: aboutRef
+    },
+    {
+      name: "FAQ",
+      ref: faqRef
+    },
+    {
+      name: "CONTACT",
+      ref: contactRef
+    }
+  ];
   function toggleMenu() {
     if (!showMenu) {
       ref.current.style.display = "flex";
@@ -42,6 +41,14 @@ function Header() {
     }
   }
 
+  const handleClick = customRef => {
+    customRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleMobileClick = customRef => {
+    customRef.current.scrollIntoView({ behavior: "smooth" });
+    setShowMenu(false);
+  };
   return (
     <header
       className={
@@ -73,7 +80,10 @@ function Header() {
             <li
               key={i}
               className="cursor-pointer px-4 py-2 text-center text-lg tracking-widest text-white drop-shadow-md lg:text-xl 2xl:text-2xl">
-              <a href={item.url} className="menuItem relative">
+              <a
+                href="#"
+                onClick={() => handleClick(item.ref)}
+                className="menuItem relative">
                 {item.name}
               </a>
             </li>
@@ -92,9 +102,12 @@ function Header() {
             <li
               key={i}
               className="block cursor-pointer p-2 text-left text-2xl tracking-widest">
-              <Link href={item.url} aria-label={item.name}>
+              <a
+                href="#"
+                onClick={() => handleMobileClick(item.ref)}
+                aria-label={item.name}>
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

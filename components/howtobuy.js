@@ -4,7 +4,7 @@ function HowToBuy() {
   return (
     <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-        SAFE, QUICK & EASY.
+        SAFE, QUICK & EASY
       </h1>
       <div className="flex w-full flex-row flex-wrap items-center justify-center bg-brand bg-opacity-[45%] px-5 pt-8">
         <div className="flex w-full flex-col items-center justify-center px-4 py-10 lg:w-3/12">

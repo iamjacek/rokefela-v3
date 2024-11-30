@@ -1,6 +1,11 @@
 "use client";
 
-export default function Button({ children, extraStyle, form }) {
+export default function Button({
+  children,
+  playerRef,
+  extraStyle,
+  form
+}) {
   const handleClick = e => {
     e.preventDefault();
     playerRef.current.scrollIntoView({ behavior: "smooth" });

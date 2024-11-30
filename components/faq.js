@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import Image from "next/image";
 
 const Accordion = ({
@@ -31,7 +31,7 @@ const Accordion = ({
     <div className="relative w-full max-w-5xl">
       <div
         onClick={handleClick}
-        className="my-2 flex min-h-[60px] w-full cursor-pointer items-center justify-items-start bg-brand bg-opacity-[45%] py-4 pl-6 pr-20">
+        className="my-3 flex min-h-[60px] w-full cursor-pointer items-center justify-items-start bg-brand bg-opacity-[45%] py-4 pl-6 pr-20">
         <h3 className="font-serif text-base uppercase leading-4 tracking-wider text-white md:text-lg lg:text-xl">
           {title}
         </h3>
@@ -57,16 +57,19 @@ const Accordion = ({
   );
 };
 
-export default function FAQ({ faq }) {
+const FAQ = forwardRef((props, ref) => {
+  const { faq } = props;
   const [isOpen, setIsOpen] = useState(false);
   const handleSectionOpen = number => {
     setIsOpen(number);
   };
 
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
+    <div
+      ref={ref}
+      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-        FAQ.
+        FAQ
       </h1>
       <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5">
         {faq &&
@@ -84,4 +87,5 @@ export default function FAQ({ faq }) {
       </div>
     </div>
   );
-}
+});
+export default FAQ;

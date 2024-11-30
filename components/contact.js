@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, forwardRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import {
@@ -8,7 +8,9 @@ import {
   EnvelopeIcon,
   PhoneIcon
 } from "@heroicons/react/24/outline";
-export default function Contact({ settings }) {
+const Contact = forwardRef((props, ref) => {
+  const { settings } = props;
+
   const {
     register,
     handleSubmit,
@@ -23,13 +25,13 @@ export default function Contact({ settings }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
   // Please update the Access Key in the Sanity CMS - Site Congig Page
-  const apiKey = settings?.w3ckey || "YOUR_ACCESS_KEY_HERE";
+  const apiKey = settings?.w3ckey;
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Stablo Template",
-      subject: "New Contact Message from Stablo Website"
+      from_name: "ROKEFELA WEBSITE",
+      subject: "New Form Message"
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
@@ -43,9 +45,11 @@ export default function Contact({ settings }) {
   });
 
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24 md:pt-20">
+    <div
+      ref={ref}
+      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24 md:pt-20">
       <h1 className="w-full px-5 py-10 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-        Contact.
+        Contact
       </h1>
 
       <div className="w-full md:max-w-[520px]">
@@ -172,4 +176,5 @@ export default function Contact({ settings }) {
       </div>
     </div>
   );
-}
+});
+export default Contact;

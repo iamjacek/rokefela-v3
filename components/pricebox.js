@@ -13,7 +13,7 @@ function PriceBox({ title, subtitle, price, features, playerRef }) {
   };
   return (
     <div
-      className={`flex w-full flex-col overflow-hidden bg-dimmed px-7 py-8 text-center transition-[max-height] duration-300 ease-in-out md:w-[calc(50%-1.5rem/2)] lg:max-h-full lg:w-[calc(25%-1.5rem*3/4)] lg:px-3 lg:py-4 ${
+      className={`flex w-full flex-col overflow-hidden bg-dimmed px-7 py-8 text-center transition-[max-height] duration-300 ease-in-out md:w-[calc(50%-1.5rem/2)] lg:max-h-full lg:w-[calc(33%-1.5rem*2/3)] lg:px-3 lg:py-4 xl:w-[calc(20%-1.5rem*4/5)] ${
         isOpen ? "max-h-[2000px]" : "max-h-[506px]"
       }`}>
       <h3 className="h-[100px] py-3 font-serif text-3xl uppercase tracking-wider text-white">
