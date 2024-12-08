@@ -1,6 +1,8 @@
+"use client";
 import { FiFacebook, FiInstagram, FiYoutube } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 const footerData = [
   {
     title: "TERMS",
@@ -72,50 +74,58 @@ const FooterCopyright = () => {
 export default function Footer(props) {
   return (
     <footer className="bg-rokefelaBlack">
-      <div className="sm:pt-30 pt-20">
-        {/* Footer social links */}
-        <div className="mb-12 flex flex-col items-center justify-center px-5 sm:mb-28 md:px-20">
-          <div className="flex w-full flex-wrap gap-4 text-center sm:gap-6">
-            {footerData &&
-              footerData.map((link, i) => (
-                <div
-                  key={i}
-                  className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
-                  <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
-                    {link.title}
-                  </h4>
+      <AnimationOnScroll
+        animateIn="animate__bounceIn"
+        animateOnce
+        duration={0.7}
+        offset={50}>
+        <div className="sm:pt-30 pt-20">
+          {/* Footer social links */}
+          <div className="mb-12 flex flex-col items-center justify-center px-5 sm:mb-28 md:px-20">
+            <div className="flex w-full flex-wrap gap-4 text-center sm:gap-6">
+              {footerData &&
+                footerData.map((link, i) => (
                   <div
-                    className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
-                    {link.links &&
-                      link.links.map((el, i) => (
-                        <a
-                          key={i}
-                          href={el.href}
-                          target="__blank"
-                          className="flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline">
-                          {el.image ? (
-                            <Image
-                              src={el.icon}
-                              alt="X"
-                              width={28}
-                              height={28}
-                              className="mx-4 text-xl sm:text-2xl md:text-3xl"
-                            />
-                          ) : el.text ? (
-                            el.text
-                          ) : (
-                            <i className="mx-4 text-3xl">{el.icon}</i>
-                          )}
-                        </a>
-                      ))}
+                    key={i}
+                    className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
+                    <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
+                      {link.title}
+                    </h4>
+                    <div
+                      className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
+                      {link.links &&
+                        link.links.map((el, i) => (
+                          <a
+                            key={i}
+                            href={el.href}
+                            target="__blank"
+                            className="flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline">
+                            {el.image ? (
+                              <Image
+                                src={el.icon}
+                                alt="X"
+                                width={28}
+                                height={28}
+                                className="mx-4 text-xl sm:text-2xl md:text-3xl"
+                              />
+                            ) : el.text ? (
+                              el.text
+                            ) : (
+                              <i className="mx-4 text-3xl">
+                                {el.icon}
+                              </i>
+                            )}
+                          </a>
+                        ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
-        </div>
 
-        <FooterCopyright />
-      </div>
+          <FooterCopyright />
+        </div>
+      </AnimationOnScroll>
     </footer>
   );
 }

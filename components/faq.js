@@ -1,6 +1,7 @@
 "use client";
 import { forwardRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Accordion = ({
   title,
@@ -68,23 +69,36 @@ const FAQ = forwardRef((props, ref) => {
     <div
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
-      <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-        FAQ
-      </h1>
-      <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5">
-        {faq &&
-          faq[0].data &&
-          faq[0].data.map((el, index) => (
-            <Accordion
-              title={el.title}
-              content={el.content}
-              key={el._key}
-              index={index}
-              isOpen={isOpen}
-              handleOpening={number => handleSectionOpen(number)}
-            />
-          ))}
-      </div>
+      <AnimationOnScroll
+        animateIn="animate__bounceIn"
+        animateOnce
+        duration={0.7}
+        offset={50}>
+        <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
+          FAQ
+        </h1>
+      </AnimationOnScroll>
+      <AnimationOnScroll
+        animateIn="animate__bounceIn"
+        animateOnce
+        duration={0.7}
+        delay={0.3 * 1000}
+        offset={50}>
+        <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5">
+          {faq &&
+            faq[0].data &&
+            faq[0].data.map((el, index) => (
+              <Accordion
+                title={el.title}
+                content={el.content}
+                key={el._key}
+                index={index}
+                isOpen={isOpen}
+                handleOpening={number => handleSectionOpen(number)}
+              />
+            ))}
+        </div>
+      </AnimationOnScroll>
     </div>
   );
 });

@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { FiX, FiMenu } from "react-icons/fi";
 import logoLight from "@/public/img/logo.svg";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Header({ playerRef, aboutRef, faqRef, contactRef }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -74,22 +75,30 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
         </button>
       </div>
       {/* desktop menu */}
+
       <div className="absolute inset-x-0 top-0 flex hidden justify-center bg-gradient-to-b from-rokefelaBlack from-[-100%] py-6 font-mono md:block">
-        <ul className="flex flex-row justify-center gap-4">
-          {menuItems.map((item, i) => (
-            <li
-              key={i}
-              className="cursor-pointer px-4 py-2 text-center text-lg tracking-widest text-white drop-shadow-md lg:text-xl 2xl:text-2xl">
-              <a
-                href="#"
-                onClick={() => handleClick(item.ref)}
-                className="menuItem relative">
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <AnimationOnScroll
+          animateIn="animate__bounceIn"
+          animateOnce
+          duration={0.7}
+          offset={50}>
+          <ul className="flex flex-row justify-center gap-4">
+            {menuItems.map((item, i) => (
+              <li
+                key={i}
+                className="cursor-pointer px-4 py-2 text-center text-lg tracking-widest text-white drop-shadow-md lg:text-xl 2xl:text-2xl">
+                <a
+                  href="#"
+                  onClick={() => handleClick(item.ref)}
+                  className="menuItem relative">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </AnimationOnScroll>
       </div>
+
       {/* mobile menu */}
       <div
         ref={ref}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Button from "@/components/button";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export default function Hero({ hero, playerRef }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,19 +38,31 @@ export default function Hero({ hero, playerRef }) {
   return (
     <div className="flex h-screen min-h-[500px] w-full items-center justify-center overflow-hidden bg-brand bg-[url('/img/hero-image.png')] bg-cover bg-center bg-no-repeat pb-28 pt-[96px] bg-blend-overlay md:pb-24">
       <div className="flex h-full w-full flex-col items-center justify-center px-5">
-        <h1 className="z-0 flex w-full flex-col items-center justify-center text-center font-serif text-6xl uppercase tracking-wider text-white drop-shadow-md lg:text-8xl 2xl:text-9xl">
-          {hero && hero[0].mainTitle}
-          <span
-            className="block min-h-[120px] w-full text-center text-4xl transition-all duration-500 sm:min-h-[96px] md:inline-block lg:text-6xl 2xl:text-7xl"
-            ref={titleText}>
-            {hero && hero[0].names[currentIndex]}
-          </span>
-        </h1>
-        <Button
-          playerRef={playerRef}
-          extraStyle="py-4 px-4 md:px-20 md:px-44 sm:py-5 md:py-6 sm:px-36 2xl:py-8 2xl:px-64">
-          BUY BEATS
-        </Button>
+        <AnimationOnScroll
+          animateIn="animate__bounceIn"
+          animateOnce
+          duration={0.7}
+          delay={0.3 * 1000}>
+          <h1 className="z-0 flex w-full flex-col items-center justify-center text-center font-serif text-6xl uppercase tracking-wider text-white drop-shadow-md lg:text-8xl 2xl:text-9xl">
+            {hero && hero[0].mainTitle}
+            <span
+              className="block min-h-[120px] w-full text-center text-4xl transition-all duration-500 sm:min-h-[96px] md:inline-block lg:text-6xl 2xl:text-7xl"
+              ref={titleText}>
+              {hero && hero[0].names[currentIndex]}
+            </span>
+          </h1>
+        </AnimationOnScroll>
+        <AnimationOnScroll
+          animateIn="animate__bounceIn"
+          animateOnce
+          duration={0.7}
+          delay={0.5 * 1000}>
+          <Button
+            playerRef={playerRef}
+            extraStyle="py-4 px-4 md:px-20 md:px-44 sm:py-5 md:py-6 sm:px-36 2xl:py-8 2xl:px-64">
+            BUY BEATS
+          </Button>
+        </AnimationOnScroll>
       </div>
     </div>
   );

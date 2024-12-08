@@ -39,7 +39,7 @@ function PriceBox({ title, subtitle, price, features, playerRef }) {
                 alt="tick icon"
                 width={72}
                 height={45}
-                className="mr-2 mt-[1px] h-[20px] w-[20px]"
+                className="mr-4 mt-[1px] h-[20px] w-[20px]"
               />
               <div className="font-sans text-base tracking-wide text-white">
                 {el.name}

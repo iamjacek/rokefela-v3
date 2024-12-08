@@ -8,6 +8,8 @@ import {
   getSettings
 } from "@/lib/sanity/client";
 
+import "@/node_modules/animate.css/animate.min.css";
+
 export default async function IndexPage() {
   const hero = await getAllHeros();
   const pricing = await getAllPricing();

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { AnimationOnScroll } from "react-animation-on-scroll";
 const paymentIcons = [
   {
     src: "/img/americanexpress_icon.png",
@@ -42,18 +42,24 @@ const paymentIcons = [
 function Payment() {
   return (
     <div className="flex w-full items-center justify-center bg-rokefelaBlack px-5 pb-24">
-      <div className="flex max-w-[275px] flex-row flex-wrap items-center justify-center gap-2 md:max-w-full lg:gap-4 ">
-        {paymentIcons.map(icon => (
-          <Image
-            key={icon.alt}
-            src={icon.src}
-            alt={icon.alt}
-            width={72}
-            height={45}
-            className="h-[26px] w-[42px] lg:h-[45px] lg:w-[72px]"
-          />
-        ))}
-      </div>
+      <AnimationOnScroll
+        animateIn="animate__bounceIn"
+        animateOnce
+        duration={0.7}
+        offset={50}>
+        <div className="flex max-w-[275px] flex-row flex-wrap items-center justify-center gap-2 md:max-w-full lg:gap-4 ">
+          {paymentIcons.map(icon => (
+            <Image
+              key={icon.alt}
+              src={icon.src}
+              alt={icon.alt}
+              width={72}
+              height={45}
+              className="h-[26px] w-[42px] lg:h-[45px] lg:w-[72px]"
+            />
+          ))}
+        </div>
+      </AnimationOnScroll>
     </div>
   );
 }
