@@ -11,22 +11,24 @@ export default function Hero({ hero, playerRef }) {
     const interval = setInterval(() => {
       const updatedData = currentIndex + 1;
       titleText.current.style.opacity = 0;
-      titleText.current.style.transform =
-        "translateY(70px) scale(2.5) skew(10deg)";
-      titleText.current.style.filter = "blur(1.5rem)";
       setTimeout(() => {
         if (currentIndex === hero[0].names.length - 1) {
           setCurrentIndex(0);
         } else {
           setCurrentIndex(updatedData);
         }
-      }, 250);
+      }, 850);
+      setTimeout(() => {
+        titleText.current.style.filter = "blur(1rem)";
+        titleText.current.style.transform =
+          "translateY(70px) scale(2.5) skew(10deg)";
+      }, 400);
       setTimeout(() => {
         titleText.current.style.transform =
           "translateY(0) scale(1) skew(0)";
         titleText.current.style.opacity = 1;
         titleText.current.style.filter = "blur(0)";
-      }, 400);
+      }, 800);
     }, 3500);
 
     return () => clearInterval(interval);
@@ -38,7 +40,7 @@ export default function Hero({ hero, playerRef }) {
         <h1 className="z-0 flex w-full flex-col items-center justify-center text-center font-serif text-6xl uppercase tracking-wider text-white drop-shadow-md lg:text-8xl 2xl:text-9xl">
           {hero && hero[0].mainTitle}
           <span
-            className="block min-h-[120px] w-full text-center text-4xl transition-all sm:min-h-[96px] md:inline-block lg:text-6xl 2xl:text-7xl"
+            className="block min-h-[120px] w-full text-center text-4xl transition-all duration-500 sm:min-h-[96px] md:inline-block lg:text-6xl 2xl:text-7xl"
             ref={titleText}>
             {hero && hero[0].names[currentIndex]}
           </span>

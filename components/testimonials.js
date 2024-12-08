@@ -22,7 +22,7 @@ const Testimonials = ({ testimonials }) => {
             <p className="font-msg text-xl tracking-wider text-white">
               {review}
             </p>
-            <div className="absolute bottom-[-30px] left-[40px] rounded-[50px] border-2 border-[#656565] bg-rokefelaBlack px-3 py-1 text-3xl lg:text-4xl">
+            <div className="absolute bottom-[-30px] left-[40px] rounded-[50px] border-2 border-[#656565] bg-rokefelaBlack px-3 py-1 text-3xl">
               ❤️
             </div>
           </div>
@@ -69,6 +69,38 @@ const Testimonials = ({ testimonials }) => {
             className={`absolute right-0 top-[30%] hidden translate-y-1/2 rotate-90 cursor-pointer p-2.5 md:block lg:right-10 xl:right-20 xl:right-32`}
             onClick={e => carousel?.current?.slideNext(e)}
           /> */}
+        </div>
+      </div>
+      <div className=" relative flex w-full items-center justify-center bg-brand bg-opacity-[45%] px-8 py-12 ">
+        <div className="relative flex w-full max-w-5xl flex-wrap justify-center">
+          <Image
+            src="/img/rev1.png"
+            alt="review"
+            width={1170}
+            height={1765}
+            className={`w-6/6 relative left-0 cursor-pointer p-2.5 md:w-3/6 `}
+          />
+          <Image
+            src="/img/rev2.png"
+            alt="review"
+            width={1170}
+            height={1765}
+            className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
+          />
+          <Image
+            src="/img/rev3.png"
+            alt="review"
+            width={1169}
+            height={1132}
+            className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
+          />
+          <Image
+            src="/img/rev4.png"
+            alt="review"
+            width={1169}
+            height={1132}
+            className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
+          />
         </div>
       </div>
     </section>
