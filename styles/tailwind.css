@@ -228,6 +228,13 @@ a {
   transition-delay: 0s;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+  div {
+    color: grey;
+  }
+}
+
 @keyframes color-button-animate {
   0% {
     color: white;

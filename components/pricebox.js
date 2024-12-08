@@ -33,9 +33,9 @@ function PriceBox({ title, subtitle, price, features, playerRef }) {
           features.map((el, index) => (
             <div
               key={el._key}
-              className="flex w-full flex-row items-start px-2 py-4 text-left">
+              className={`flex w-full flex-row items-start px-2 py-4 text-left ${el.strikethrough ? "strikethrough" : ""}`}>
               <Image
-                src="/img/tick.svg"
+                src={`${el.strikethrough ? "/img/cross.svg" : "/img/tick.svg"}`}
                 alt="tick icon"
                 width={72}
                 height={45}
