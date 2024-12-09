@@ -3,6 +3,8 @@ import { FiFacebook, FiInstagram, FiYoutube } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+
+const styles = "w-full max-w-48";
 const footerData = [
   {
     title: "TERMS",
@@ -43,8 +45,13 @@ const footerData = [
   {
     title: "SUBSCRIBE TO MY YOUTUBE CHANNEL",
     links: [
-      { text: "DETROIT TYPE BEATS", href: "/licences" },
-      { text: "FEMALE RAP BEATS", href: "/faq" }
+      {
+        icon: "/img/footer_image.png",
+        href: "https://www.youtube.com/@rokefela",
+        image: true,
+        styleImage: styles,
+        styleATag: styles
+      }
     ]
   }
 ];
@@ -99,14 +106,14 @@ export default function Footer(props) {
                             key={i}
                             href={el.href}
                             target="__blank"
-                            className="flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline">
+                            className={`flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage}`}>
                             {el.image ? (
                               <Image
                                 src={el.icon}
                                 alt="X"
-                                width={28}
-                                height={28}
-                                className="mx-4 text-xl sm:text-2xl md:text-3xl"
+                                width={el.styleATag ? "192" : "28"}
+                                height={el.styleATag ? "192" : "28"}
+                                className={`mx-4 text-xl sm:text-2xl md:text-3xl ${el.styleATag ?? el.styleATag}`}
                               />
                             ) : el.text ? (
                               el.text
