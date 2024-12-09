@@ -73,13 +73,14 @@ function Streaming() {
   ));
 
   const styles = {
-    width: "1000px"
+    width: "100%",
+    textAlign: "center"
   };
 
   return (
     <section className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -88,14 +89,14 @@ function Streaming() {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         delay={0.3 * 1000}
         offset={50}
         style={styles}>
         {serviceIcons && (
-          <div className="relative order-2 my-10 w-full max-w-5xl px-5 lg:order-3">
+          <div className="relative order-2 mx-auto my-10 w-full max-w-5xl px-5 lg:order-3">
             <AliceCarousel
               items={items}
               autoPlayInterval="1000"
@@ -112,7 +113,7 @@ function Streaming() {
         )}
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         delay={0.5 * 1000}

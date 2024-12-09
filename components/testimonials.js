@@ -34,7 +34,7 @@ const Testimonials = ({ testimonials }) => {
   }, [testimonials]);
 
   const styles = {
-    width: "5000px"
+    width: "100%"
   };
 
   return [
@@ -42,7 +42,7 @@ const Testimonials = ({ testimonials }) => {
       key="1"
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -51,7 +51,7 @@ const Testimonials = ({ testimonials }) => {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         delay={0.3 * 1000}
@@ -92,7 +92,7 @@ const Testimonials = ({ testimonials }) => {
       </AnimationOnScroll>
       <div className=" relative flex w-full items-center justify-center bg-brand bg-opacity-[45%] px-8 py-12 ">
         <AnimationOnScroll
-          animateIn="animate__bounceIn"
+          animateIn="fadeInUp"
           animateOnce
           delay={0.3 * 1000}
           duration={0.7}

@@ -78,7 +78,7 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
 
       <div className="absolute inset-x-0 top-0 flex hidden justify-center bg-gradient-to-b from-rokefelaBlack from-[-100%] py-6 font-mono md:block">
         <AnimationOnScroll
-          animateIn="animate__bounceIn"
+          animateIn="fadeInUp"
           animateOnce
           duration={0.7}
           offset={50}>

@@ -43,7 +43,7 @@ function Payment() {
   return (
     <div className="flex w-full items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>

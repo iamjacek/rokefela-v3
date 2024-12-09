@@ -75,7 +75,7 @@ export default function Footer(props) {
   return (
     <footer className="bg-rokefelaBlack">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>

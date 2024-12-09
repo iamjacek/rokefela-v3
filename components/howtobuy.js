@@ -4,7 +4,7 @@ function HowToBuy() {
   return (
     <div className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         delay={0.3 * 1000}
@@ -14,7 +14,7 @@ function HowToBuy() {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         delay={0.5 * 1000}
         duration={0.7}

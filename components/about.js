@@ -13,7 +13,7 @@ const About = forwardRef((props, ref) => {
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -22,7 +22,7 @@ const About = forwardRef((props, ref) => {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -61,7 +61,7 @@ const About = forwardRef((props, ref) => {
         </div>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         delay={0.5 * 1000}
         duration={0.7}

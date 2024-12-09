@@ -5,14 +5,15 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Player = forwardRef((props, ref) => {
   const styles = {
-    width: "1000px"
+    width: "100%",
+    textAlign: "center"
   };
   return (
     <div
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -21,7 +22,7 @@ const Player = forwardRef((props, ref) => {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         offset={50}
         duration={0.7}
@@ -29,7 +30,7 @@ const Player = forwardRef((props, ref) => {
         style={styles}>
         <iframe
           src="https://player.beatstars.com/?storeId=148389"
-          className="max-w-5xl"
+          className="mx-auto max-w-5xl"
           width="100%"
           height="800"></iframe>
       </AnimationOnScroll>

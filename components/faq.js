@@ -70,7 +70,7 @@ const FAQ = forwardRef((props, ref) => {
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -79,7 +79,7 @@ const FAQ = forwardRef((props, ref) => {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         delay={0.3 * 1000}

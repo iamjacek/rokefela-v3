@@ -12,7 +12,8 @@ import {
 const Contact = forwardRef((props, ref) => {
   const { settings } = props;
   const styles = {
-    width: "530px"
+    width: "100%",
+    textAlign: "center"
   };
   const {
     register,
@@ -52,7 +53,7 @@ const Contact = forwardRef((props, ref) => {
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24 md:pt-20">
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={50}>
@@ -61,12 +62,12 @@ const Contact = forwardRef((props, ref) => {
         </h1>
       </AnimationOnScroll>
       <AnimationOnScroll
-        animateIn="animate__bounceIn"
+        animateIn="fadeInUp"
         animateOnce
         style={styles}
         duration={0.7}
         offset={50}>
-        <div className="w-full md:max-w-[520px]">
+        <div className="mx-auto w-full md:max-w-[520px]">
           <div>
             <form onSubmit={handleSubmit(onSubmit)} className="my-10">
               <input
