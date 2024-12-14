@@ -3462,3 +3462,16 @@ a {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+.hero-background:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 82%,
+    #0e0d0e 100%
+  );
+}

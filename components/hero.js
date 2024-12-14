@@ -39,7 +39,7 @@ export default function Hero({ hero, playerRef }) {
     textAlign: "center"
   };
   return (
-    <div className="flex h-screen min-h-[500px] w-full items-center justify-center overflow-hidden bg-brand bg-[url('/img/hero-image.png')] bg-cover bg-center bg-no-repeat pb-28 pt-[96px] bg-blend-overlay md:pb-24">
+    <div className="hero-background flex h-screen min-h-[500px] w-full items-center justify-center overflow-hidden bg-brand bg-[url('/img/hero-image.png')] bg-cover bg-center bg-no-repeat pb-28 pt-[96px] bg-blend-overlay md:pb-24">
       <div className="flex h-full w-full flex-col items-center justify-center px-5">
         <AnimationOnScroll
           animateIn="fadeInUp"

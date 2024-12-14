@@ -46,8 +46,8 @@ const footerData = [
     title: "SUBSCRIBE TO MY YOUTUBE CHANNEL",
     links: [
       {
-        icon: "/img/footer_image.png",
-        href: "https://www.youtube.com/@rokefela",
+        icon: "/img/footer_image.png?v=01",
+        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",
         image: true,
         styleImage: styles,
         styleATag: styles
