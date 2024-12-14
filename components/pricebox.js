@@ -50,7 +50,7 @@ function PriceBox({ title, subtitle, price, features, playerRef }) {
       <button
         className="my-7 font-mono tracking-wider text-white underline hover:no-underline lg:hidden"
         onClick={handleDetails}>
-        SEE DETAILS
+        {isOpen ? "HIDE DETAILS" : "SEE DETAILS"}
       </button>
       <button
         href="#"

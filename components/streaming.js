@@ -78,7 +78,7 @@ function Streaming() {
   };
 
   return (
-    <section className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
+    <section className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-12">
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce
@@ -118,7 +118,7 @@ function Streaming() {
         duration={0.7}
         delay={0.5 * 1000}
         offset={50}>
-        <h2 className="order-3 w-full px-5 pt-14 text-center font-subtitle text-5xl text-xl uppercase tracking-wider text-white md:text-3xl lg:order-2 lg:pb-20">
+        <h2 className="order-3 w-full px-5 pt-14 text-center font-subtitle text-5xl text-xl uppercase tracking-wider text-white md:text-3xl lg:order-2 lg:pb-4">
           RELEASE SONGS ON ALL STREAMING PLATFORMS
         </h2>
       </AnimationOnScroll>
