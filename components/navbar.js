@@ -76,7 +76,7 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
       </div>
       {/* desktop menu */}
 
-      <div className="absolute inset-x-0 top-0 flex hidden justify-center bg-gradient-to-b from-rokefelaBlack from-[-100%] py-6 font-mono md:block">
+      <div className="absolute inset-x-0 top-0 z-10 flex hidden justify-center bg-gradient-to-b from-rokefelaBlack from-[-100%] py-6 font-mono md:block">
         <AnimationOnScroll
           animateIn="fadeInUp"
           animateOnce
@@ -103,7 +103,7 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
       <div
         ref={ref}
         style={{ display: "none" }}
-        className={`absolute top-0 flex h-screen w-full items-center justify-center bg-rokefelaBlack pb-20 pt-20 font-mono text-white transition-[opacity] duration-300 ease-in-out ${
+        className={`absolute top-0 z-10 flex h-screen w-full items-center justify-center bg-rokefelaBlack pb-20 pt-20 font-mono text-white transition-[opacity] duration-300 ease-in-out ${
           showMenu ? "opacity-100" : "opacity-0"
         }`}>
         <ul className="flex flex-col items-center justify-center justify-between">

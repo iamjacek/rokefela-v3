@@ -6,7 +6,8 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 const About = forwardRef((props, ref) => {
   const { playerRef, about } = props;
   const styles = {
-    width: "1000px"
+    width: "100%",
+    textAlign: "center"
   };
   return (
     <section
@@ -63,6 +64,7 @@ const About = forwardRef((props, ref) => {
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce
+        style={styles}
         delay={0.5 * 1000}
         duration={0.7}
         offset={50}>

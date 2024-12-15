@@ -11,12 +11,12 @@ async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
+        "ROKEFELA | I AM THE BEATS. Industry Quality Rap Beats | Dark, Hard, Detroit & Female Rap Type Beats. Trap & Hip-Hop Instrumentals",
       template: "%s | Stablo"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
+      "ROKEFELA | I AM THE BEATS. Industry Quality Rap Beats | Dark, Hard, Detroit & Female Rap Type Beats. Trap & Hip-Hop Instrumentals",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
     authors: [{ name: "Surjith" }],
     canonical: settings?.url,
@@ -32,7 +32,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "ROKEFELA | I AM THE BEATS. Industry Quality Rap Beats | Dark, Hard, Detroit & Female Rap Type Beats. Trap & Hip-Hop Instrumentals",
       card: "summary_large_image"
     },
     robots: {
