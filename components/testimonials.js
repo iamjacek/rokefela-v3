@@ -130,6 +130,23 @@ const Testimonials = ({ testimonials }) => {
           </div>
         </AnimationOnScroll>
       </div>
+      <div className=" relative flex w-full flex-col items-center justify-center bg-brand bg-opacity-[45%] px-8 py-12 ">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2FXWdoxEtrQ?si=RNaRKZ2gj5vJIaFd"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <h3 className="mt-6 inline text-3xl text-white">
+          "BE YOU" on BET AWARDS 2024
+        </h3>
+        <p className="inline text-xl text-white">
+          by VanVan & Heiress Harris (prod. Rokefela)
+        </p>
+      </div>
     </section>
   ];
 };
