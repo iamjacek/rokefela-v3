@@ -2,6 +2,7 @@
 import { forwardRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { PortableText } from "@portabletext/react";
 
 const Accordion = ({
   title,
@@ -50,9 +51,9 @@ const Accordion = ({
         className={`w-full overflow-hidden px-6 transition-[max-height] duration-300 ease-in-out ${
           openThisCard ? "max-h-96" : "max-h-0"
         }`}>
-        <p className="pb-8 pt-4 font-sans text-base tracking-wider text-white lg:text-lg">
-          {content[0].children[0].text}
-        </p>
+        <div className="pb-8 pt-4 font-sans text-base tracking-wider text-white lg:text-lg">
+          <PortableText value={content} />
+        </div>
       </div>
     </div>
   );
