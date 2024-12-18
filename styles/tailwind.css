@@ -3475,3 +3475,12 @@ a {
     #0e0d0e 100%
   );
 }
+.yt-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+.strikethrough {
+  text-decoration-thickness: 2px !important;
+}

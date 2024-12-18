@@ -40,7 +40,7 @@ const Testimonials = ({ testimonials }) => {
   return [
     <section
       key="1"
-      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
+      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-12">
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce
@@ -130,8 +130,9 @@ const Testimonials = ({ testimonials }) => {
           </div>
         </AnimationOnScroll>
       </div>
-      <div className=" relative flex w-full flex-col items-center justify-center bg-brand bg-opacity-[45%] px-8 py-12 ">
+      <div className="relative flex w-full flex-col items-center justify-center bg-brand bg-opacity-[45%] px-10 py-12">
         <iframe
+          className="yt-video"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/2FXWdoxEtrQ?si=RNaRKZ2gj5vJIaFd"

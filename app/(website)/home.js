@@ -12,6 +12,7 @@ import Testimonials from "@/components/testimonials";
 import About from "@/components/about";
 import Contact from "@/components/contact";
 import Navbar from "@/components/navbar";
+import Banner from "@/components/banner";
 
 export default function Home({
   hero,
@@ -28,6 +29,7 @@ export default function Home({
   return (
     <>
       <Container>
+        {hero && <Banner hero={hero} />}
         <Navbar
           playerRef={playerRef}
           aboutRef={aboutRef}

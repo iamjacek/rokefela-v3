@@ -32,22 +32,21 @@ const footerData = [
         href: "https://www.instagram.com/rokefela_/"
       },
       {
-        icon: <FiFacebook />,
-        href: "https://www.facebook.com/Rokefelamusic"
+        icon: <FiYoutube />,
+        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1"
       },
       {
         icon: "/img/x.svg",
-        href: "https://twitter.com/rokefela",
+        href: "https://x.com/rokefela",
         image: true
       }
     ]
   },
   {
-    title: "SUBSCRIBE TO MY YOUTUBE CHANNEL",
     links: [
       {
-        icon: "/img/footer_image.png?v=01",
-        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",
+        icon: "/img/footer_image.png?v=03",
+        href: "https://beacons.ai/rokefela",
         image: true,
         styleImage: styles,
         styleATag: styles
@@ -95,9 +94,12 @@ export default function Footer(props) {
                   <div
                     key={i}
                     className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
-                    <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
-                      {link.title}
-                    </h4>
+                    {link.title && (
+                      <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
+                        {link.title}
+                      </h4>
+                    )}
+
                     <div
                       className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
                       {link.links &&
@@ -106,7 +108,7 @@ export default function Footer(props) {
                             key={i}
                             href={el.href}
                             target="__blank"
-                            className={`flex cursor-pointer items-center justify-center py-3 font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage}`}>
+                            className={`flex cursor-pointer items-center justify-center font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage} ${el.icon ?? "py-3"}`}>
                             {el.image ? (
                               <Image
                                 src={el.icon}
