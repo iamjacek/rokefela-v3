@@ -3484,3 +3484,6 @@ a {
 .strikethrough {
   text-decoration-thickness: 2px !important;
 }
+.countdown-link {
+  display: flex;
+}
