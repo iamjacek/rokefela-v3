@@ -22,7 +22,7 @@ function PriceBox({ title, subtitle, price, features, playerRef }) {
       <div className="py-3 font-sans text-2xl tracking-wider text-white">
         {price}
       </div>
-      <p className="min-h-[150px] py-3 font-bold text-base tracking-wider text-white">
+      <p className="pb-10 pt-3 text-lg leading-6 tracking-widest text-white lg:min-h-64">
         {subtitle}
       </p>
       <div

@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    ".next/types/**/*.ts"],
+    ".next/types/**/*.ts", "components/popup.js"],
   "exclude": [
     "node_modules"
   ]

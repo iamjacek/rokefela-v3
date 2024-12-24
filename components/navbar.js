@@ -1,33 +1,20 @@
 "use client";
 import { useState, useRef } from "react";
-import Link from "next/link";
 import { FiX, FiMenu } from "react-icons/fi";
-import logoLight from "@/public/img/logo.svg";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Link from "next/link";
 
-function Header({ playerRef, aboutRef, faqRef, contactRef }) {
+function Header({
+  playerRef,
+  aboutRef,
+  faqRef,
+  contactRef,
+  menuItems
+}) {
   const [showMenu, setShowMenu] = useState(false);
   const ref = useRef(null);
   const delay = 300;
 
-  const menuItems = [
-    {
-      name: "BEATS",
-      ref: playerRef
-    },
-    {
-      name: "ABOUT",
-      ref: aboutRef
-    },
-    {
-      name: "FAQ",
-      ref: faqRef
-    },
-    {
-      name: "CONTACT",
-      ref: contactRef
-    }
-  ];
   function toggleMenu() {
     if (!showMenu) {
       ref.current.style.display = "flex";
@@ -43,7 +30,9 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
   }
 
   const handleClick = customRef => {
-    customRef.current.scrollIntoView({ behavior: "smooth" });
+    if (customRef) {
+      customRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const handleMobileClick = customRef => {
@@ -53,10 +42,12 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
   return (
     <header
       className={
-        showMenu ? "fixed z-30 block w-full" : "absolute block w-full"
+        showMenu
+          ? "fixed z-[999999] block w-full"
+          : "absolute block w-full"
       }>
       {/* Small screen hamburger menu */}
-      <div className="relative z-40 md:hidden">
+      <div className="relative z-[999999] md:hidden">
         <button
           onClick={toggleMenu}
           type="button"
@@ -81,18 +72,20 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
           animateIn="fadeInUp"
           animateOnce
           duration={0.7}
-          offset={50}>
+          offset={150}>
           <ul className="flex flex-row justify-center gap-4">
             {menuItems.map((item, i) => (
               <li
                 key={i}
                 className="cursor-pointer px-4 py-2 text-center text-lg tracking-widest text-white drop-shadow-md lg:text-xl 2xl:text-2xl">
-                <a
-                  href="#"
+                <Link
+                  href={`${item.href ? item.href : "#"}`}
+                  target={item.target}
+                  rel="noopener"
                   onClick={() => handleClick(item.ref)}
                   className="menuItem relative">
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -103,7 +96,7 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
       <div
         ref={ref}
         style={{ display: "none" }}
-        className={`absolute top-0 z-10 flex h-screen w-full items-center justify-center bg-rokefelaBlack pb-20 pt-20 font-mono text-white transition-[opacity] duration-300 ease-in-out ${
+        className={`absolute top-0 z-[99999] flex h-screen w-full items-center justify-center bg-rokefelaBlack pb-20 pt-20 font-mono text-white transition-[opacity] duration-300 ease-in-out ${
           showMenu ? "opacity-100" : "opacity-0"
         }`}>
         <ul className="flex flex-col items-center justify-center justify-between">
@@ -111,34 +104,16 @@ function Header({ playerRef, aboutRef, faqRef, contactRef }) {
             <li
               key={i}
               className="block cursor-pointer p-2 text-left text-2xl tracking-widest">
-              <a
+              <Link
                 href="#"
                 onClick={() => handleMobileClick(item.ref)}
                 aria-label={item.name}>
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
-      <style jsx>{`
-        a.menuItem::before {
-          content: "";
-          background: #ec407a;
-          width: 100%;
-          height: 2px;
-          position: absolute;
-          left: 0;
-          bottom: -3px;
-          background: #fff;
-          transition: 0.2s transform ease;
-          transform: scale3d(0, 1, 1);
-          transform-origin: 0 50%;
-        }
-        a.menuItem:hover::before {
-          transform: scale3d(1, 1, 1);
-        }
-      `}</style>
     </header>
   );
 }

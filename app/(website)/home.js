@@ -13,6 +13,7 @@ import About from "@/components/about";
 import Contact from "@/components/contact";
 import Navbar from "@/components/navbar";
 import Banner from "@/components/banner";
+import Popup from "@/components/popup";
 
 export default function Home({
   hero,
@@ -26,15 +27,42 @@ export default function Home({
   const aboutRef = useRef(null);
   const faqRef = useRef(null);
   const contactRef = useRef(null);
+
+  const menuItems = [
+    {
+      name: "BEATS",
+      ref: playerRef
+    },
+    {
+      name: "ABOUT",
+      ref: aboutRef
+    },
+    {
+      name: "FAQ",
+      ref: faqRef
+    },
+    {
+      name: "CONTACT",
+      ref: contactRef
+    },
+    {
+      name: "DTH⛓️",
+      href: "https://dth.rokefela.com/",
+      ref: null,
+      target: "_blank"
+    }
+  ];
   return (
     <>
       <Container>
+        {hero && <Popup hero={hero} />}
         {hero && <Banner hero={hero} />}
         <Navbar
           playerRef={playerRef}
           aboutRef={aboutRef}
           faqRef={faqRef}
           contactRef={contactRef}
+          menuItems={menuItems}
         />
         {hero && <Hero hero={hero} playerRef={playerRef} />}
         <Player ref={playerRef} />

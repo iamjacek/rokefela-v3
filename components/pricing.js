@@ -22,7 +22,7 @@ function Pricing({ pricing, playerRef }) {
         delay={0.5 * 1000}
         duration={0.7}
         offset={50}>
-        <section className="flex w-full max-w-7xl flex-wrap justify-center gap-6">
+        <section className="flex w-full max-w-[1500px] flex-wrap justify-center gap-6">
           {pricing &&
             pricing[0].data &&
             pricing[0].data.map((item, index) => (

@@ -39,13 +39,18 @@ const footerData = [
         icon: "/img/x.svg",
         href: "https://x.com/rokefela",
         image: true
+      },
+      {
+        icon: "/img/spotify.png",
+        href: "https://open.spotify.com/artist/4Ikusg8rsSZk8n2SmSqJH4",
+        image: true
       }
     ]
   },
   {
     links: [
       {
-        icon: "/img/footer_image.png?v=03",
+        icon: "/img/footer_image.png?v=08",
         href: "https://beacons.ai/rokefela",
         image: true,
         styleImage: styles,
@@ -66,12 +71,15 @@ const FooterCopyright = () => {
         <a
           href="https://rokefela.com"
           target="__blank"
+          rel="noopener noreferrer"
           className="text-secondary-dark dark:text-secondary-light font-medium uppercase drop-shadow-md hover:underline">
           ROKEFELA
         </a>
       </div>
       <div className="mr-6 hidden font-mono text-sm tracking-wider text-white drop-shadow-md hover:underline lg:block">
-        <Link href="/policy">PRIVACY POLICY</Link>
+        <Link href="/privacypolicy" rel="noopener noreferrer">
+          PRIVACY POLICY
+        </Link>
       </div>
     </div>
   );

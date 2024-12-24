@@ -11,7 +11,7 @@ const Player = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
+      className="md:px12 flex w-full flex-col items-center justify-center bg-rokefelaBlack px-6 pb-24 sm:px-8">
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce

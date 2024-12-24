@@ -5,6 +5,53 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+const images = [
+  {
+    url: "/img/rev1.png",
+    key: 1
+  },
+  {
+    url: "/img/rev2.png",
+    key: 2
+  },
+  {
+    url: "/img/rev3.png",
+    key: 3
+  },
+  {
+    url: "/img/rev4.png",
+    key: 4
+  },
+  {
+    url: "/img/rev5.png",
+    key: 5
+  },
+  {
+    url: "/img/rev6.png",
+    key: 6
+  },
+  {
+    url: "/img/rev7.png",
+    key: 7
+  },
+  {
+    url: "/img/rev8.png",
+    key: 8
+  },
+  {
+    url: "/img/rev9.png",
+    key: 9
+  },
+  {
+    url: "/img/rev10.png",
+    key: 10
+  },
+  {
+    url: "/img/rev11.png",
+    key: 11
+  }
+];
+
 const Testimonials = ({ testimonials }) => {
   const carousel = useRef(null);
   const [items, setItems] = useState([]);
@@ -98,35 +145,16 @@ const Testimonials = ({ testimonials }) => {
           duration={0.7}
           offset={50}>
           <div className="relative flex w-full max-w-5xl flex-wrap justify-center">
-            <Image
-              src="/img/rev1.png"
-              alt="review"
-              width={1170}
-              height={1765}
-              className={`w-6/6 relative left-0 cursor-pointer p-2.5 md:w-3/6 `}
-            />
-
-            <Image
-              src="/img/rev2.png"
-              alt="review"
-              width={1170}
-              height={1765}
-              className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
-            />
-            <Image
-              src="/img/rev3.png"
-              alt="review"
-              width={1169}
-              height={1132}
-              className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
-            />
-            <Image
-              src="/img/rev4.png"
-              alt="review"
-              width={1169}
-              height={1132}
-              className={`w-6/6 relative left-0  top-[30%] cursor-pointer p-2.5 md:w-3/6 `}
-            />
+            {images.map(image => (
+              <Image
+                key={image.key}
+                src={image.url}
+                alt="review"
+                width={1170}
+                height={1765}
+                className={`w-6/6 xl: relative left-0 cursor-pointer object-cover object-left p-2.5 md:w-6/12 lg:w-2/6`}
+              />
+            ))}
           </div>
         </AnimationOnScroll>
       </div>
@@ -135,14 +163,14 @@ const Testimonials = ({ testimonials }) => {
           className="yt-video"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/2FXWdoxEtrQ?si=RNaRKZ2gj5vJIaFd"
+          src="https://www.youtube.com/embed/3FIvSm784uo?si=2Wl9sEkcJQ1rGzfp"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen></iframe>
         <h3 className="mt-6 inline text-3xl text-white">
-          "BE YOU" on BET AWARDS 2024
+          &quot;BE YOU&quot; on BET AWARDS 2024
         </h3>
         <p className="inline text-xl text-white">
           by VanVan & Heiress Harris (prod. Rokefela)
