@@ -72,7 +72,7 @@ function Header({
           animateIn="fadeInUp"
           animateOnce
           duration={0.7}
-          offset={150}>
+          offset={50}>
           <ul className="flex flex-row justify-center gap-4">
             {menuItems.map((item, i) => (
               <li
