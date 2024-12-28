@@ -7,47 +7,47 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const images = [
   {
-    url: "/img/rev1.png",
+    url: "/img/rev1.png?v=01",
     key: 1
   },
   {
-    url: "/img/rev2.png",
+    url: "/img/rev2.png?v=01",
     key: 2
   },
   {
-    url: "/img/rev3.png",
+    url: "/img/rev3.png?v=01",
     key: 3
   },
   {
-    url: "/img/rev4.png",
+    url: "/img/rev4.png?v=01",
     key: 4
   },
   {
-    url: "/img/rev5.png",
+    url: "/img/rev5.png?v=01",
     key: 5
   },
   {
-    url: "/img/rev6.png",
+    url: "/img/rev6.png?v=01",
     key: 6
   },
   {
-    url: "/img/rev7.png",
+    url: "/img/rev7.png?v=01",
     key: 7
   },
   {
-    url: "/img/rev8.png",
+    url: "/img/rev8.png?v=01",
     key: 8
   },
   {
-    url: "/img/rev9.png",
+    url: "/img/rev9.png?v=01",
     key: 9
   },
   {
-    url: "/img/rev10.png",
+    url: "/img/rev10.png?v=01",
     key: 10
   },
   {
-    url: "/img/rev11.png",
+    url: "/img/rev11.png?v=01",
     key: 11
   }
 ];

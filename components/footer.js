@@ -7,7 +7,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 const styles = "w-full max-w-48";
 const footerData = [
   {
-    title: "TERMS",
+    title: "IMPORTANT",
     links: [
       { text: "Licences", href: "/licences" },
       { text: "FAQ", href: "/faq" },
@@ -16,12 +16,11 @@ const footerData = [
     ]
   },
   {
-    title: "LINKS",
+    title: "NEXT STEPS",
     links: [
-      { text: "Licences", href: "/licences" },
-      { text: "FAQ", href: "/faq" },
-      { text: "ABOUT", href: "/about" },
-      { text: "Contact", href: "/contact" }
+      { text: "8 Free for profit beats", href: "https://mailchi.mp/3bc001c74959/8freebeats" },
+      { text: "20 Detroit Beat Bundle", href: "https://dth.rokefela.com/" },
+      { text: "350k+ YT Channel", href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1" },
     ]
   },
   {
