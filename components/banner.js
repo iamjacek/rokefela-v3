@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 const CountdownTimer = dynamic(() => import("./countdown"), {
   ssr: false
 });
-import { useEffect } from "react";
+
 
 export default function Banner({ hero, playerRef }) {
  
