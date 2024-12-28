@@ -3,7 +3,7 @@ import { FiX } from "react-icons/fi";
 import React, { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
 
-export default function Popup({ hero }) {
+export default function Popup({ playerRef }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -23,6 +23,12 @@ export default function Popup({ hero }) {
 
   const handleClose = () => {
     setIsOpen(false);
+  };
+
+  const handleClick = e => {
+    e.preventDefault();
+    setIsOpen(false);
+    playerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -48,6 +54,12 @@ export default function Popup({ hero }) {
           <div className="drop-shadow-roke flex justify-center pt-4 pt-6 text-3xl text-red-600">
             24 hours left
           </div>
+          <button
+      onClick={handleClick}
+      className={`main-button mt-5 w-full border-2 border-white font-button text-base tracking-widest text-white transition-all sm:w-fit sm:border-[3px] sm:text-lg md:mt-10 md:text-2xl 2xl:mt-16 2xl:text-3xl mx-auto py-4 px-10 mb-8 mt-0`}>
+      <span className="drop-shadow-md">ADD 5 BEATS 👇</span>
+      <div className="transition"></div>
+    </button>
         </div>
       </div>
     </>

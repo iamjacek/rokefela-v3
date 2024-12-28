@@ -1,12 +1,14 @@
 import React from "react";
 import { useCountdown } from "@/components/hooks/useCountdown";
 
-const ExpiredNotice = ({ endMsg }) => {
+const ExpiredNotice = ({ endMsg, playerRef }) => {
+  const handleClick = e => {
+    e.preventDefault();
+    playerRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <a
-      href="/"
-      target="_blank"
-      rel="noopener noreferrer"
+    <div
+      onClick={handleClick}
       className={`from-1% relative z-[999999] m-0 flex h-20 w-full cursor-pointer items-center justify-center gap-2.5 border-b-2 bg-gradient-to-r from-brand to-rokefelaBlack px-4 text-center transition-all sm:gap-5 md:gap-6 lg:gap-8`}>
       <div className="expired-notice">
         <p className="text-xs leading-3 text-white sm:text-base md:text-xl lg:text-2xl">
@@ -15,7 +17,7 @@ const ExpiredNotice = ({ endMsg }) => {
             : "Deal has expired! Check out my socials to be up to date!"}
         </p>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -78,18 +80,21 @@ const ShowCounter = ({ days, hours, minutes, seconds, size }) => {
   );
 };
 
-const CountdownTimer = ({ targetDate, size, endMsg, text }) => {
+const CountdownTimer = ({ targetDate, size, endMsg, text, playerRef }) => {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
+  const handleClick = e => {
+    e.preventDefault();
+    playerRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   if (days + hours + minutes + seconds <= 0) {
-    return <ExpiredNotice endMsg={endMsg} />;
+    return <ExpiredNotice endMsg={endMsg} playerRef={playerRef} />;
   } else {
     return (
       <>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+        onClick={handleClick}
           className={`from-1% relative z-[999999] m-0 flex h-20 w-full cursor-pointer items-center justify-center gap-2.5 border-b-2 bg-gradient-to-r from-brand to-rokefelaBlack px-4 text-center transition-all sm:gap-5 md:gap-6 lg:gap-8`}>
           <p className="text-xs text-white sm:text-base md:text-xl lg:text-2xl">
             {text}
@@ -101,7 +106,7 @@ const CountdownTimer = ({ targetDate, size, endMsg, text }) => {
             seconds={seconds}
             size={size}
           />
-        </a>
+        </div>
       </>
     );
   }
