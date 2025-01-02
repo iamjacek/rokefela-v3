@@ -63,7 +63,7 @@ const FooterCopyright = () => {
   return (
     <div className="flex items-center justify-center bg-brand bg-opacity-[45%] px-5 py-20 text-center md:py-6 lg:justify-between">
       <div className="ml-6 hidden font-mono text-sm tracking-wider text-white hover:underline lg:block">
-        <Link href="/terms">TERMS OF USE</Link>
+        <Link href="#">TERMS OF USE</Link>
       </div>
       <div className="font-sans text-base text-lg tracking-wider text-white">
         &copy; Copyright {new Date().getFullYear()},{` `}
@@ -76,7 +76,7 @@ const FooterCopyright = () => {
         </a>
       </div>
       <div className="mr-6 hidden font-mono text-sm tracking-wider text-white drop-shadow-md hover:underline lg:block">
-        <Link href="/privacypolicy" rel="noopener noreferrer">
+        <Link href="#" rel="noopener noreferrer">
           PRIVACY POLICY
         </Link>
       </div>

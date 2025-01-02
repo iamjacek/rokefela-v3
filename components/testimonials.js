@@ -35,7 +35,7 @@ const images = [
     key: 7
   },
   {
-    url: "/img/rev8.png?v=01",
+    url: "/img/rev8.png?v=02",
     key: 8
   },
   {
@@ -43,7 +43,7 @@ const images = [
     key: 9
   },
   {
-    url: "/img/rev10.png?v=01",
+    url: "/img/rev10.png?v=02",
     key: 10
   },
   {
