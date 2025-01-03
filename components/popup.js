@@ -15,9 +15,9 @@ export default function Popup({ playerRef }) {
         expires: new Date(date.setMonth(date.getMonth() + 6)),
         sameSite: "Lax"
       });
-      setTimeout(() => {
-        setIsOpen(true);
-      }, 8000);
+      // setTimeout(() => {
+      //   setIsOpen(true);
+      // }, 8000);
     }
   }, []);
 
