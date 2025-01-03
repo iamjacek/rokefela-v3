@@ -10,11 +10,11 @@ export default function Popup({ playerRef }) {
     const cookies = new Cookies("registered");
     if (!cookies.get("registered")) {
       var date = new Date();
-      cookies.set("registered", "true", {
-        path: "/",
-        expires: new Date(date.setMonth(date.getMonth() + 6)),
-        sameSite: "Lax"
-      });
+      // cookies.set("registered", "true", {
+      //   path: "/",
+      //   expires: new Date(date.setMonth(date.getMonth() + 6)),
+      //   sameSite: "Lax"
+      // });
       // setTimeout(() => {
       //   setIsOpen(true);
       // }, 8000);
