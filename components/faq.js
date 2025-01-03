@@ -30,7 +30,7 @@ const Accordion = ({
   };
 
   return (
-    <div className="relative w-full max-w-5xl">
+    <div className="relative w-full max-w-5xl" id="faq">
       <div
         onClick={handleClick}
         className="my-3 flex min-h-[60px] w-full cursor-pointer items-center justify-items-start bg-brand bg-opacity-[45%] py-4 pl-6 pr-20">

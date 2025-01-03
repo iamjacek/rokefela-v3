@@ -50,6 +50,7 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <div
+    id="contact"
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24 md:pt-20">
       <AnimationOnScroll

@@ -9,18 +9,18 @@ const footerData = [
   {
     title: "IMPORTANT",
     links: [
-      { text: "Licences", href: "/licences" },
-      { text: "FAQ", href: "/faq" },
-      { text: "ABOUT", href: "/about" },
-      { text: "Contact", href: "/contact" }
+      { text: "Licences", href: "#licences",target: "_self" },
+      { text: "FAQ", href: "#faq",target: "_self" },
+      { text: "ABOUT", href: "#about",target: "_self" },
+      { text: "Contact", href: "#contact",target: "_self" }
     ]
   },
   {
     title: "NEXT STEPS",
     links: [
-      { text: "8 Free for profit beats", href: "https://mailchi.mp/3bc001c74959/8freebeats" },
-      { text: "20 Detroit Beat Bundle", href: "https://dth.rokefela.com/" },
-      { text: "350k+ YT Channel", href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1" },
+      { text: "8 Free for profit beats", href: "https://mailchi.mp/3bc001c74959/8freebeats",target: "_blank" },
+      { text: "20 Detroit Beat Bundle", href: "https://dth.rokefela.com/",target: "_blank" },
+      { text: "350k+ YT Channel", href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",target: "_blank" },
     ]
   },
   {
@@ -28,20 +28,24 @@ const footerData = [
     links: [
       {
         icon: <FiInstagram />,
-        href: "https://www.instagram.com/rokefela_/"
+        href: "https://www.instagram.com/rokefela_/",
+        target: "_blank"
       },
       {
         icon: <FiYoutube />,
-        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1"
+        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",
+        target: "_blank"
       },
       {
         icon: "/img/x.svg",
         href: "https://x.com/rokefela",
+        target: "_blank",
         image: true
       },
       {
         icon: "/img/spotify.png",
         href: "https://open.spotify.com/artist/4Ikusg8rsSZk8n2SmSqJH4",
+        target: "_blank",
         image: true
       }
     ]
@@ -51,6 +55,7 @@ const footerData = [
       {
         icon: "/img/footer_image.png?v=08",
         href: "https://beacons.ai/rokefela",
+        target: "_blank",
         image: true,
         styleImage: styles,
         styleATag: styles
@@ -114,7 +119,7 @@ export default function Footer(props) {
                           <a
                             key={i}
                             href={el.href}
-                            target="__blank"
+                            target={el.target}
                             className={`flex cursor-pointer items-center justify-center font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage} ${el.icon ?? "py-3"}`}>
                             {el.image ? (
                               <Image

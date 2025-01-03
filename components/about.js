@@ -11,6 +11,7 @@ const About = forwardRef((props, ref) => {
   };
   return (
     <section
+    id="about"
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
