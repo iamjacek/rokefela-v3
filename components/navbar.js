@@ -36,7 +36,9 @@ function Header({
   };
 
   const handleMobileClick = customRef => {
-    customRef.current.scrollIntoView({ behavior: "smooth" });
+    if (customRef) {
+      customRef.current.scrollIntoView({ behavior: "smooth" });
+    }
     setShowMenu(false);
   };
   return (
@@ -72,7 +74,7 @@ function Header({
           animateIn="fadeInUp"
           animateOnce
           duration={0.7}
-          offset={50}>
+          offset={20}>
           <ul className="flex flex-row justify-center gap-4">
             {menuItems.map((item, i) => (
               <li
@@ -105,7 +107,9 @@ function Header({
               key={i}
               className="block cursor-pointer p-2 text-left text-2xl tracking-widest">
               <Link
-                href="#"
+                href={`${item.href ? item.href : "#"}`}
+                target={item.target}
+                rel="noopener"
                 onClick={() => handleMobileClick(item.ref)}
                 aria-label={item.name}>
                 {item.name}

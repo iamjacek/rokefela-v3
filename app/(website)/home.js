@@ -55,8 +55,8 @@ export default function Home({
   return (
     <>
       <Container>
-        {hero && <Popup hero={hero} />}
-        {hero && <Banner hero={hero} />}
+        {hero && <Popup hero={hero} playerRef={playerRef} />}
+        {hero && <Banner hero={hero} playerRef={playerRef} />}
         <Navbar
           playerRef={playerRef}
           aboutRef={aboutRef}

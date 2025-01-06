@@ -30,7 +30,7 @@ const Accordion = ({
   };
 
   return (
-    <div className="relative w-full max-w-5xl">
+    <div className="relative w-full max-w-5xl" id="faq">
       <div
         onClick={handleClick}
         className="my-3 flex min-h-[60px] w-full cursor-pointer items-center justify-items-start bg-brand bg-opacity-[45%] py-4 pl-6 pr-20">
@@ -49,7 +49,7 @@ const Accordion = ({
       </div>
       <div
         className={`w-full overflow-hidden px-6 transition-[max-height] duration-300 ease-in-out ${
-          openThisCard ? "max-h-96" : "max-h-0"
+          openThisCard ? "max-h-[2000px]" : "max-h-0"
         }`}>
         <div className="pb-8 pt-4 font-sans text-base tracking-wider text-white lg:text-lg">
           <PortableText value={content} />
