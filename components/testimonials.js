@@ -93,9 +93,12 @@ const Testimonials = ({ testimonials }) => {
         animateOnce
         duration={0.7}
         offset={50}>
-        <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
+        <h1 className="z-0 w-full py-20 pb-5 pt-5 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
           TESTIMONIALS
         </h1>
+        <h4 className="pb-5 text-center font-serif text-2xl uppercase tracking-wider text-white">
+          10+ years of experience
+        </h4>
       </AnimationOnScroll>
       <AnimationOnScroll
         animateIn="fadeInUp"
