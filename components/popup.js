@@ -48,11 +48,12 @@ const images = [
 const requiredSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email")
-    .required("Email is required")
+    .required("Email is required"),
+  name: Yup.string().required("Name is required")
 });
 
 export default function Popup({ playerRef, settings }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [imageNo, setImageNo] = useState(0);
   const [status, setStatus] = useState(null > null);
   const [message, setMessage] = useState("");
@@ -118,16 +119,15 @@ export default function Popup({ playerRef, settings }) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          email: values?.email
+          email: values?.email,
+          full_name: values?.name
         })
       });
       const datas = await response.json();
 
       if (datas.status >= 400) {
         setStatus(datas.status);
-        setMessage(
-          "Error joining the newsletter. You can directly contact me at contact@rokefela.com."
-        );
+        setMessage("Error joining the newsletter. Try again later.");
         setTimeout(() => {
           setMessage("");
           setButtonDisabled(false);
@@ -135,20 +135,19 @@ export default function Popup({ playerRef, settings }) {
         return;
       }
       setStatus(201);
-      setMessage("Thank you for subscribing my newsletter 💎R.");
+      setMessage("Check your email and download the beats🎲");
       setRun(true);
       setTimeout(() => {
         setTotalCounts(0);
         setMessage("");
         resetForm();
         setButtonDisabled(false);
-      }, 4000);
+        setIsOpen(false);
+      }, 5000);
       setTotalCounts(400);
     } catch (error) {
       setStatus(500);
-      setMessage(
-        "Error joining the newsletter. You can directly contact me at contact@rokefela.com."
-      );
+      setMessage("Error joining the newsletter. Try again later.");
       setTimeout(() => {
         setMessage("");
         setButtonDisabled(false);
@@ -167,7 +166,8 @@ export default function Popup({ playerRef, settings }) {
         </div>
         <Formik
           initialValues={{
-            email: ""
+            email: "",
+            name: ""
           }}
           validationSchema={requiredSchema}
           onSubmit={handleSubmit}>
@@ -183,7 +183,7 @@ export default function Popup({ playerRef, settings }) {
                 8 FREE BEATS WITH COMMERCIAL RIGHTS 👇
               </h3>
               <Field
-                type="name"
+                type="text"
                 name="name"
                 className="relative mt-8 w-full grow border-2 bg-transparent bg-white px-5 py-3 text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4 md:mt-12"
                 placeholder="Full Name"
