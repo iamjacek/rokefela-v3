@@ -53,7 +53,7 @@ const requiredSchema = Yup.object({
 });
 
 export default function Popup({ playerRef, settings }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [imageNo, setImageNo] = useState(0);
   const [status, setStatus] = useState(null > null);
   const [message, setMessage] = useState("");
