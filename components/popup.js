@@ -111,6 +111,7 @@ export default function Popup({ playerRef, settings }) {
   };
 
   const handleSubmit = async (values, { resetForm }) => {
+    setMessage("");
     setButtonDisabled(true);
     try {
       const response = await fetch("/api/subscribe", {
@@ -129,7 +130,6 @@ export default function Popup({ playerRef, settings }) {
         setStatus(datas.status);
         setMessage("Error joining the newsletter. Try again later.");
         setTimeout(() => {
-          setMessage("");
           setButtonDisabled(false);
         }, 8000);
         return;
@@ -149,7 +149,6 @@ export default function Popup({ playerRef, settings }) {
       setStatus(500);
       setMessage("Error joining the newsletter. Try again later.");
       setTimeout(() => {
-        setMessage("");
         setButtonDisabled(false);
       }, 8000);
     }
@@ -186,7 +185,7 @@ export default function Popup({ playerRef, settings }) {
                 type="text"
                 name="name"
                 className="relative mt-8 w-full grow border-2 bg-transparent bg-white px-5 py-3 text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4 md:mt-12"
-                placeholder="Full Name"
+                placeholder="First Name"
                 autoComplete="off"
               />
               <Field
