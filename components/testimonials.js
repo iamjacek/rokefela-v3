@@ -143,7 +143,7 @@ const Testimonials = ({ testimonials }) => {
                   width={1170}
                   height={1765}
                   placeholder="empty"
-                  className={`h-full w-auto object-cover object-left`}
+                  className={`h-full w-full object-cover object-left`}
                 />
               </div>
             ))}
