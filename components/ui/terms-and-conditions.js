@@ -3,7 +3,7 @@ import Container from "@/components/container";
 export default function Privacy() {
   return (
     <>
-      <Container className="mx-auto mb-8 max-w-5xl px-6">
+      <Container className="mx-auto mb-8 max-w-5xl bg-rokefelaBlack px-6">
         <div className="h-[92px]"></div>
         <h1 className="z-0 w-full px-5 py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
           Terms & Conditions

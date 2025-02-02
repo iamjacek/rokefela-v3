@@ -1,4 +1,4 @@
-import Terms from "@/components/ui/terms-of-use";
+import Terms from "@/components/ui/terms-and-conditions";
 
 export default function Page() {
   return <Terms />;
