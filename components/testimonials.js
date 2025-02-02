@@ -121,22 +121,6 @@ const Testimonials = ({ testimonials }) => {
               items={items}
               ref={carousel}
             />
-            {/* <Image
-            src="/img/chevron.svg"
-            alt="chevron"
-            width={52}
-            height={38}
-            className={`absolute left-0 top-[30%] hidden translate-y-1/2 -rotate-90 cursor-pointer p-2.5 md:block lg:left-10 xl:left-20 2xl:left-32`}
-            onClick={e => carousel?.current?.slidePrev(e)}
-          />
-          <Image
-            src="/img/chevron.svg"
-            alt="chevron"
-            width={52}
-            height={38}
-            className={`absolute right-0 top-[30%] hidden translate-y-1/2 rotate-90 cursor-pointer p-2.5 md:block lg:right-10 xl:right-20 xl:right-32`}
-            onClick={e => carousel?.current?.slideNext(e)}
-          /> */}
           </div>
         </div>
       </AnimationOnScroll>
@@ -146,17 +130,22 @@ const Testimonials = ({ testimonials }) => {
           animateOnce
           delay={0.3 * 1000}
           duration={0.7}
-          offset={50}>
-          <div className="relative flex w-full max-w-5xl flex-wrap justify-center">
+          offset={50}
+          style={styles}>
+          <div className="relative mx-auto flex w-full max-w-5xl flex-wrap justify-center">
             {images.map(image => (
-              <Image
+              <div
                 key={image.key}
-                src={image.url}
-                alt="review"
-                width={1170}
-                height={1765}
-                className={`w-6/6 xl: relative left-0 cursor-pointer object-cover object-left p-2.5 md:w-6/12 lg:w-2/6`}
-              />
+                className={`w-6/6 relative aspect-[1170/1765] cursor-pointer p-2.5 md:w-3/6 lg:w-2/6`}>
+                <Image
+                  src={image.url}
+                  alt="review"
+                  width={1170}
+                  height={1765}
+                  placeholder="empty"
+                  className={`h-full w-auto object-cover object-left`}
+                />
+              </div>
             ))}
           </div>
         </AnimationOnScroll>

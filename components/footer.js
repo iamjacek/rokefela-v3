@@ -1,5 +1,5 @@
 "use client";
-import { FiFacebook, FiInstagram, FiYoutube } from "react-icons/fi";
+import { FiInstagram, FiYoutube } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -9,18 +9,30 @@ const footerData = [
   {
     title: "IMPORTANT",
     links: [
-      { text: "Licences", href: "#licences",target: "_self" },
-      { text: "FAQ", href: "#faq",target: "_self" },
-      { text: "ABOUT", href: "#about",target: "_self" },
-      { text: "Contact", href: "#contact",target: "_self" }
+      { text: "Licences", href: "#licences", target: "_self" },
+      { text: "FAQ", href: "#faq", target: "_self" },
+      { text: "ABOUT", href: "#about", target: "_self" },
+      { text: "Contact", href: "#contact", target: "_self" }
     ]
   },
   {
     title: "NEXT STEPS",
     links: [
-      { text: "8 Free for profit beats", href: "https://mailchi.mp/3bc001c74959/8freebeats",target: "_blank" },
-      { text: "20 Detroit Beat Bundle", href: "https://dth.rokefela.com/",target: "_blank" },
-      { text: "350k+ YT Channel", href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",target: "_blank" },
+      {
+        text: "8 Free for profit beats",
+        href: "https://mailchi.mp/3bc001c74959/8freebeats",
+        target: "_blank"
+      },
+      {
+        text: "20 Detroit Beat Bundle",
+        href: "https://dth.rokefela.com/",
+        target: "_blank"
+      },
+      {
+        text: "350k+ YT Channel",
+        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",
+        target: "_blank"
+      }
     ]
   },
   {
@@ -66,24 +78,20 @@ const footerData = [
 
 const FooterCopyright = () => {
   return (
-    <div className="flex items-center justify-center bg-brand bg-opacity-[45%] px-5 py-20 text-center md:py-6 lg:justify-between">
-      <div className="ml-6 hidden font-mono text-sm tracking-wider text-white hover:underline lg:block">
-        <Link href="#">TERMS OF USE</Link>
+    <div className="flex flex-col items-center justify-center gap-y-4 bg-brand bg-opacity-[45%] px-5 py-20 text-center md:py-6 lg:flex-row lg:justify-between">
+      <div className="font-mono text-sm tracking-wider text-white hover:underline lg:ml-6">
+        <Link href="/terms-and-conditions">TERMS AND CONDITIONS</Link>
       </div>
       <div className="font-sans text-base text-lg tracking-wider text-white">
         &copy; Copyright {new Date().getFullYear()},{` `}
-        <a
-          href="https://rokefela.com"
-          target="__blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/"
           className="text-secondary-dark dark:text-secondary-light font-medium uppercase drop-shadow-md hover:underline">
           ROKEFELA
-        </a>
-      </div>
-      <div className="mr-6 hidden font-mono text-sm tracking-wider text-white drop-shadow-md hover:underline lg:block">
-        <Link href="#" rel="noopener noreferrer">
-          PRIVACY POLICY
         </Link>
+      </div>
+      <div className="font-mono text-sm tracking-wider text-white drop-shadow-md hover:underline lg:mr-6">
+        <Link href="/privacy">PRIVACY POLICY</Link>
       </div>
     </div>
   );

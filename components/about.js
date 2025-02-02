@@ -1,24 +1,21 @@
 import Image from "next/image";
 import Button from "@/components/button";
 import Markdown from "react-markdown";
-import { forwardRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-const About = forwardRef((props, ref) => {
-  const { playerRef, about } = props;
+const About = ({ playerRef, about }) => {
   const styles = {
     width: "100%",
     textAlign: "center"
   };
   return (
     <section
-    id="about"
-      ref={ref}
+      id="about"
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce
         duration={0.7}
-        offset={50}>
+        offset={100}>
         <h1 className="z-0 w-full py-20 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
           WHO AM I?
         </h1>
@@ -27,7 +24,7 @@ const About = forwardRef((props, ref) => {
         animateIn="fadeInUp"
         animateOnce
         duration={0.7}
-        offset={50}>
+        offset={100}>
         <div className="flex max-w-[615px] flex-col items-start justify-center gap-10 lg:max-w-5xl lg:flex-row">
           <div className="font-sans text-lg leading-8 tracking-wider text-white lg:w-8/12">
             {about &&
@@ -77,6 +74,6 @@ const About = forwardRef((props, ref) => {
       </AnimationOnScroll>
     </section>
   );
-});
+};
 
 export default About;

@@ -1,6 +1,7 @@
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
+import Navbar from "@/components/navbar";
 
 async function sharedMetaData(params) {
   const settings = await getSettings();
@@ -18,7 +19,7 @@ async function sharedMetaData(params) {
       settings?.description ||
       "ROKEFELA | I AM THE BEATS. Industry Quality Rap Beats | Dark, Hard, Detroit & Female Rap Type Beats. Trap & Hip-Hop Instrumentals",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+    authors: [{ name: "Rokefela" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -50,6 +51,7 @@ export default async function Layout({ children, params }) {
 
   return (
     <>
+      <Navbar />
       <div>{children}</div>
       <Footer/>
     </>

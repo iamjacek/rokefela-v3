@@ -10,6 +10,7 @@ const Player = forwardRef((props, ref) => {
   };
   return (
     <div
+      id="player"
       ref={ref}
       className="md:px12 flex w-full flex-col items-center justify-center bg-rokefelaBlack px-6 pb-24 sm:px-8">
       <AnimationOnScroll

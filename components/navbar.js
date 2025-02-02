@@ -4,13 +4,32 @@ import { FiX, FiMenu } from "react-icons/fi";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Link from "next/link";
 
-function Header({
-  playerRef,
-  aboutRef,
-  faqRef,
-  contactRef,
-  menuItems
-}) {
+const menuItems = [
+  {
+    name: "BEATS",
+    href: "/#player"
+  },
+  {
+    name: "ABOUT",
+    href: "/#about"
+  },
+  {
+    name: "FAQ",
+    href: "/#faq"
+  },
+  {
+    name: "CONTACT",
+    href: "/#contact"
+  },
+  {
+    name: "DTH⛓️",
+    href: "https://dth.rokefela.com/",
+    ref: null,
+    target: "_blank"
+  }
+];
+
+function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const ref = useRef(null);
   const delay = 300;
@@ -29,16 +48,7 @@ function Header({
     }
   }
 
-  const handleClick = customRef => {
-    if (customRef) {
-      customRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleMobileClick = customRef => {
-    if (customRef) {
-      customRef.current.scrollIntoView({ behavior: "smooth" });
-    }
     setShowMenu(false);
   };
   return (
@@ -84,7 +94,6 @@ function Header({
                   href={`${item.href ? item.href : "#"}`}
                   target={item.target}
                   rel="noopener"
-                  onClick={() => handleClick(item.ref)}
                   className="menuItem relative">
                   {item.name}
                 </Link>

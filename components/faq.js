@@ -68,6 +68,7 @@ const FAQ = forwardRef((props, ref) => {
 
   return (
     <div
+      id="faq"
       ref={ref}
       className="flex w-full flex-col items-center justify-center bg-rokefelaBlack pb-24">
       <AnimationOnScroll
