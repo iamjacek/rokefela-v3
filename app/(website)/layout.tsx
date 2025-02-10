@@ -22,6 +22,12 @@ async function sharedMetaData(params) {
     authors: [{ name: "Rokefela" }],
     canonical: settings?.url,
     openGraph: {
+      title: 'Rokefela',
+      description: 'ROKEFELA | I AM THE BEATS. Industry Quality Rap Beats | Dark, Hard, Detroit & Female Rap Type Beats. Trap & Hip-Hop Instrumentals',
+      url: 'https://www.rokefela.com',
+      siteName: 'Rokefela',
+      locale: 'en_US',
+      type: 'website',
       images: [
         {
           url:
