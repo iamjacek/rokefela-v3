@@ -72,7 +72,7 @@ export default function FreeBeats() {
                 8 FREE FOR PROFIT BEATS
               </h1>
             </div>
-            <div className="color-white mx-auto my-8 max-w-5xl px-4 text-base sm:px-8 lg:max-w-xl">
+            <div className="mx-auto my-8 max-w-5xl px-4 text-base text-white sm:px-8 lg:max-w-xl">
               <p className="pb-8 font-bold">
                 Perform, stream, sell, promote, drop album & EARN
                 MONEY on all digital platforms like: SPOTIFY, APPLE
@@ -100,7 +100,7 @@ export default function FreeBeats() {
                   <Field
                     type="email"
                     name="email"
-                    className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4"
+                    className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack text-white outline-none outline-none placeholder:text-gray-700 focus:ring-4"
                     placeholder="james@mail.com"
                     autoComplete="off"
                   />
@@ -108,7 +108,7 @@ export default function FreeBeats() {
                   <Field
                     type="text"
                     name="name"
-                    className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4"
+                    className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack text-white outline-none outline-none placeholder:text-gray-700 focus:ring-4"
                     placeholder="James"
                     autoComplete="off"
                   />
@@ -124,7 +124,7 @@ export default function FreeBeats() {
                       {message}
                     </p>
                   )}
-                  <p className="text-left text-sm">
+                  <p className="text-left text-sm text-white">
                     One-click unsubscribe option guaranteed.
                   </p>
                 </div>
