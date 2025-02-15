@@ -139,10 +139,10 @@ export default function Popup({ playerRef, settings }) {
       setRun(true);
       setTimeout(() => {
         setTotalCounts(0);
-        setMessage("");
+        //setMessage("");
         resetForm();
         setButtonDisabled(false);
-        setIsOpen(false);
+        //setIsOpen(false);
       }, 5000);
       setTotalCounts(400);
     } catch (error) {
