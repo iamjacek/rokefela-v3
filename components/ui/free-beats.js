@@ -95,18 +95,21 @@ export default function FreeBeats() {
               <Form
                 className={`${isOpen ? "visible opacity-100" : "invisible opacity-0"} mx-4 box-border flex w-[calc(100%-30px)] items-center justify-center bg-rokefelaBlack text-center opacity-0 drop-shadow-lg transition-all md:mx-0 md:h-[500px] md:w-6/12 md:max-w-[500px] md:px-6`}>
                 <div>
-                  <Field
-                    type="text"
-                    name="name"
-                    className="relative mt-8 w-full grow border-2 bg-transparent bg-white px-5 py-3 text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4 md:mt-12"
-                    placeholder="First Name"
-                    autoComplete="off"
-                  />
+                  <p>Email Address</p>
+
                   <Field
                     type="email"
                     name="email"
                     className="relative mt-4 w-full grow border-2 bg-transparent bg-white px-5 py-3 text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4 md:mt-8"
                     placeholder="E-mail address"
+                    autoComplete="off"
+                  />
+                  <p>First Name</p>
+                  <Field
+                    type="text"
+                    name="name"
+                    className="relative mt-8 w-full grow border-2 bg-transparent bg-white px-5 py-3 text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4 md:mt-12"
+                    placeholder="First Name"
                     autoComplete="off"
                   />
                   <button

@@ -19,7 +19,7 @@ const Accordion = ({
     } else {
       setOpenThisCard(false);
     }
-  }, [isOpen]);
+  }, [index, isOpen]);
 
   const handleClick = () => {
     if (openThisCard) {

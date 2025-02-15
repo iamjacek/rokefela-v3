@@ -20,17 +20,19 @@ export default function Privacy() {
           Privacy Policy Effective date: July 8, 2024
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          https://rokefela.com ("Website", "us", "we", or "our")
-          operates the https://rokefela.com and other related websites
-          (the "Service").
+          https://rokefela.com (&quot;Website&quot;, &quot;us&quot;,
+          &quot;we&quot;, or &quot;our&quot;) operates the
+          https://rokefela.com and other related websites (the
+          &quot;Service&quot;).
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Set forth below are the Terms and Conditions governing the
           Service (the “Terms and Conditions”), which may expand or
-          change from time to time. As used herein, the term "you" or
-          "your" or “user” refers to an individual, representing
-          yourself or, if applicable, acting as legal representative
-          for a group, business entity or corporation.
+          change from time to time. As used herein, the term
+          &quot;you&quot; or &quot;your&quot; or “user” refers to an
+          individual, representing yourself or, if applicable, acting
+          as legal representative for a group, business entity or
+          corporation.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           CAREFULLY READ THESE TERMS AND CONDITIONS. BY AVAILING
@@ -41,49 +43,51 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Use of Materials Found on the Website: The information,
           artwork, text, video, audio, pictures, software and other
-          intellectual property (collectively, "Materials") contained
-          on the Website are protected by copyright and international
-          laws. You may only access and use the Materials for personal
-          or educational purposes or as expressly provided for in
-          these Terms and Conditions. You may not otherwise reproduce,
-          distribute, publicly perform, publicly display, modify or
-          create derivative works of the Materials, unless authorized
-          by the appropriate copyright owner(s). In the event that you
-          print Materials found on the Website, you must include any
-          copyright notice originally included with the Materials on
-          all copies. You may not link directly to any media file
-          located on the Website Server, except where explicitly
-          allowed to do so. You should not attempt to claim any
-          Materials as your own work. Any computer software
-          downloadable or otherwise available on the Website is
-          provided subject to the terms of the applicable license
-          agreement. Before using any of our logos, please contact us
-          at rokefelamusic@gmail.com
+          intellectual property (collectively, &quot;Materials&quot;)
+          contained on the Website are protected by copyright and
+          international laws. You may only access and use the
+          Materials for personal or educational purposes or as
+          expressly provided for in these Terms and Conditions. You
+          may not otherwise reproduce, distribute, publicly perform,
+          publicly display, modify or create derivative works of the
+          Materials, unless authorized by the appropriate copyright
+          owner(s). In the event that you print Materials found on the
+          Website, you must include any copyright notice originally
+          included with the Materials on all copies. You may not link
+          directly to any media file located on the Website Server,
+          except where explicitly allowed to do so. You should not
+          attempt to claim any Materials as your own work. Any
+          computer software downloadable or otherwise available on the
+          Website is provided subject to the terms of the applicable
+          license agreement. Before using any of our logos, please
+          contact us at rokefelamusic@gmail.com
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Copyright and Trademark Infringement Policy and Notification
           Procedure: BeatStars Inc. (“BeatStars”) does not own the
           musical compositions, sound recordings, art or other written
-          or visual images (collectively, the "Content") posted by us
-          to the Website. All Content is posted by us and we have
-          represented and warranted to BeatStars that, among other
-          things, neither the Content nor the names, trademarks and
-          service marks under which Content is promoted (collectively,
-          the "Name") infringes any third party's copyright, patent,
-          trademark, trade secret or other proprietary rights, rights
-          of publicity or privacy, or moral rights (see the section
-          titled 'Representations and Warranties' of the current
-          BeatStars Terms of Service here. Buyers are subject to clear
-          any samples on any composition purchased.
+          or visual images (collectively, the &quot;Content&quot;)
+          posted by us to the Website. All Content is posted by us and
+          we have represented and warranted to BeatStars that, among
+          other things, neither the Content nor the names, trademarks
+          and service marks under which Content is promoted
+          (collectively, the &quot;Name&quot;) infringes any third
+          party&apos;s copyright, patent, trademark, trade secret or
+          other proprietary rights, rights of publicity or privacy, or
+          moral rights (see the section titled &apos;Representations
+          and Warranties&apos; of the current BeatStars Terms of
+          Service here. Buyers are subject to clear any samples on any
+          composition purchased.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Since BeatStars is not in a position to determine who has
           the prevailing claim to use any particular Content or Name
           posted to the Website, its policy on such matters is that
           they be resolved directly by the parties alleging misuse of
-          their Content and/or Name (the "Complainants'') and us.
-          Immediately notify us about allegations of infringement by
-          clicking the Contact link and contacting us directly.
+          their Content and/or Name (the
+          &quot;Complainants&apos;&apos;) and us. Immediately notify
+          us about allegations of infringement by clicking the Contact
+          link and contacting us directly.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Complainants may notify us concerning any Content and/or
@@ -104,10 +108,10 @@ export default function Privacy() {
           any issue amicably. Premium services (recurring billings)
           can be canceled anytime for any reason. Cancellations by the
           individual, group or company that signed up for the premium
-          service (collectively, the "Subscriber") will be effective
-          after the paid period. In case of cancellation by the
-          Subscriber the period that is already paid for will not be
-          reimbursed. The premium service will then remain active
+          service (collectively, the &quot;Subscriber&quot;) will be
+          effective after the paid period. In case of cancellation by
+          the Subscriber the period that is already paid for will not
+          be reimbursed. The premium service will then remain active
           until the end of the paid period. We reserve the right to
           cancel premium services for any reason at any time without
           notification. If we cancel a premium service before its
@@ -162,33 +166,33 @@ export default function Privacy() {
           Warranty Disclaimer. YOU EXPRESSLY AGREE THAT USE OF THE
           WEBSITE AND RELATED SERVICES IS AT YOUR SOLE RISK. THE
           WEBSITE, MATERIALS AND RELATED SERVICES ARE PROVIDED ON AN
-          "AS IS" AND "AS AVAILABLE" BASIS. WE NOR BEATSTARS MAKES ANY
-          REPRESENTATIONS OR WARRANTIES WITH REGARD TO THE WEBSITE OR
-          ANY MATERIALS THEREIN, WHETHER EXPRESS OR IMPLIED, ARISING
-          BY LAW OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY
-          IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A
-          PARTICULAR PURPOSE OR NON-INFRINGEMENT OR ANY IMPLIED
-          WARRANTY ARISING OUT OF COURSE OF PERFORMANCE, COURSE OF
-          DEALING OR USAGE OF TRADE. IN ADDITION, WE NOR BEATSTARS
-          MAKE ANY REPRESENTATIONS THAT THE OPERATION OF THE WEBSITE
-          WILL BE UNINTERRUPTED OR ERROR-FREE. WE NOR BEATSTARS WILL
-          BE LIABLE FOR THE CONSEQUENCES OF ANY INTERRUPTIONS OR
-          ERRORS ON THE WEBSITE. IT IS YOUR RESPONSIBILITY TO EVALUATE
-          THE ACCURACY, COMPLETENESS OR USEFULNESS OF ANY OPINION,
-          ADVICE, INFORMATION OR OTHER CONTENT OR MATERIALS PROVIDED
-          IN CONNECTION WITH OR OTHERWISE AVAILABLE THROUGH THE
-          WEBSITE. PLEASE SEEK THE ADVICE OF PROFESSIONALS, AS
-          APPROPRIATE, REGARDING THE EVALUATION OF ANY SUCH OPINION,
-          ADVICE, INFORMATION OR OTHER CONTENT. UNDER NO CIRCUMSTANCE
-          WILL BEATSTARS BE LIABLE FOR ANY LOSS OR DAMAGE CAUSED BY
-          YOUR RELIANCE ON INFORMATION OBTAINED THROUGH THE WEBSITE,
-          OTHER THAN AS REQUIRED UNDER APPLICABLE CONSUMER-PROTECTION
-          LAW. SOME JURISDICTIONS DO NOT ALLOW THE DISCLAIMER OF
-          CERTAIN WARRANTIES OR LIMITATION OF CERTAIN TYPES OF
-          DAMAGES, SO SOME OF THE ABOVE DISCLAIMER MAY NOT APPLY TO
-          YOU AND NOTHING CONTAINED HEREIN SHOULD BE CONSTRUED AS
-          EXCLUDING OR LIMITING ANY LIABILITY BEYOND WHAT IS PERMITTED
-          UNDER APPLICABLE LAW.
+          &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS. WE NOR
+          BEATSTARS MAKES ANY REPRESENTATIONS OR WARRANTIES WITH
+          REGARD TO THE WEBSITE OR ANY MATERIALS THEREIN, WHETHER
+          EXPRESS OR IMPLIED, ARISING BY LAW OR OTHERWISE, INCLUDING,
+          WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY,
+          FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OR ANY
+          IMPLIED WARRANTY ARISING OUT OF COURSE OF PERFORMANCE,
+          COURSE OF DEALING OR USAGE OF TRADE. IN ADDITION, WE NOR
+          BEATSTARS MAKE ANY REPRESENTATIONS THAT THE OPERATION OF THE
+          WEBSITE WILL BE UNINTERRUPTED OR ERROR-FREE. WE NOR
+          BEATSTARS WILL BE LIABLE FOR THE CONSEQUENCES OF ANY
+          INTERRUPTIONS OR ERRORS ON THE WEBSITE. IT IS YOUR
+          RESPONSIBILITY TO EVALUATE THE ACCURACY, COMPLETENESS OR
+          USEFULNESS OF ANY OPINION, ADVICE, INFORMATION OR OTHER
+          CONTENT OR MATERIALS PROVIDED IN CONNECTION WITH OR
+          OTHERWISE AVAILABLE THROUGH THE WEBSITE. PLEASE SEEK THE
+          ADVICE OF PROFESSIONALS, AS APPROPRIATE, REGARDING THE
+          EVALUATION OF ANY SUCH OPINION, ADVICE, INFORMATION OR OTHER
+          CONTENT. UNDER NO CIRCUMSTANCE WILL BEATSTARS BE LIABLE FOR
+          ANY LOSS OR DAMAGE CAUSED BY YOUR RELIANCE ON INFORMATION
+          OBTAINED THROUGH THE WEBSITE, OTHER THAN AS REQUIRED UNDER
+          APPLICABLE CONSUMER-PROTECTION LAW. SOME JURISDICTIONS DO
+          NOT ALLOW THE DISCLAIMER OF CERTAIN WARRANTIES OR LIMITATION
+          OF CERTAIN TYPES OF DAMAGES, SO SOME OF THE ABOVE DISCLAIMER
+          MAY NOT APPLY TO YOU AND NOTHING CONTAINED HEREIN SHOULD BE
+          CONSTRUED AS EXCLUDING OR LIMITING ANY LIABILITY BEYOND WHAT
+          IS PERMITTED UNDER APPLICABLE LAW.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Limitation of Liability. By availing yourself of the
@@ -199,32 +203,33 @@ export default function Privacy() {
           agencies, any entity controlling, controlled by or under
           common control with BeatStars, any third-party providers or
           sources of information or data and legal advisers
-          (collectively, "BeatStars Affiliates") harmless from any and
-          all losses, damages, rights, claims and actions of any kind
-          arising from or related to the Website, Materials or related
-          services including but not limited to: (a) telephone,
-          electronic, hardware or software, network, Internet or
-          computer malfunctions, failures or difficulties of any kind;
-          (b) failed, incomplete, garbled or delayed computer
-          transmissions; (c) any condition caused by events beyond the
-          control of BeatStars that may cause the Website or related
-          services to be disrupted or corrupted; (d) any injuries,
-          losses or damages of any kind arising in connection with or
-          as a result of your use of the Website, Materials or related
-          services; or (e) any printing or typographical errors in any
-          materials associated with the Website, Materials or related
-          services. In addition, you agree to defend, indemnify and
-          hold us and BeatStars Affiliates harmless from any claim,
-          suit or demand, including reasonable attorney's fees, made
-          by a third party due to or arising out of your utilizing the
-          Website, Materials or related services, your violation or
-          breach of these Terms and Conditions, your violation of any
-          rights of a third party, or any other act or omission by
-          you. IN NO EVENT WILL WE OR BEATSTARS BE LIABLE FOR ANY
-          INDIRECT, STATUTORY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL
-          DAMAGES OR ANY LOSS OF REVENUE ARISING OUT OF YOUR AVAILMENT
-          OF MATERIALS (HOWEVER ARISING, INCLUDING NEGLIGENCE), EVEN
-          IF WE OR BEATSTARS WAS ADVISED OF THE POSSIBILITY OF SUCH
+          (collectively, &quot;BeatStars Affiliates&quot;) harmless
+          from any and all losses, damages, rights, claims and actions
+          of any kind arising from or related to the Website,
+          Materials or related services including but not limited to:
+          (a) telephone, electronic, hardware or software, network,
+          Internet or computer malfunctions, failures or difficulties
+          of any kind; (b) failed, incomplete, garbled or delayed
+          computer transmissions; (c) any condition caused by events
+          beyond the control of BeatStars that may cause the Website
+          or related services to be disrupted or corrupted; (d) any
+          injuries, losses or damages of any kind arising in
+          connection with or as a result of your use of the Website,
+          Materials or related services; or (e) any printing or
+          typographical errors in any materials associated with the
+          Website, Materials or related services. In addition, you
+          agree to defend, indemnify and hold us and BeatStars
+          Affiliates harmless from any claim, suit or demand,
+          including reasonable attorney&apos;s fees, made by a third
+          party due to or arising out of your utilizing the Website,
+          Materials or related services, your violation or breach of
+          these Terms and Conditions, your violation of any rights of
+          a third party, or any other act or omission by you. IN NO
+          EVENT WILL WE OR BEATSTARS BE LIABLE FOR ANY INDIRECT,
+          STATUTORY, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES OR
+          ANY LOSS OF REVENUE ARISING OUT OF YOUR AVAILMENT OF
+          MATERIALS (HOWEVER ARISING, INCLUDING NEGLIGENCE), EVEN IF
+          WE OR BEATSTARS WAS ADVISED OF THE POSSIBILITY OF SUCH
           DAMAGES.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
@@ -267,12 +272,12 @@ export default function Privacy() {
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           By accessing and/or using the Website, You agree to
-          YouTube's Terms of Service. Age requirements for use of the
-          Service: This Service is available for individuals aged 13
-          years or older. If you are 13 or older but under the age of
-          18, you should review these Terms and Conditions with your
-          parent or guardian to make sure that you and your parent or
-          guardian understand these Terms and Conditions.
+          YouTube&apos;s Terms of Service. Age requirements for use of
+          the Service: This Service is available for individuals aged
+          13 years or older. If you are 13 or older but under the age
+          of 18, you should review these Terms and Conditions with
+          your parent or guardian to make sure that you and your
+          parent or guardian understand these Terms and Conditions.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Modification of Terms and Conditions: From time to time we

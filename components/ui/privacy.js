@@ -22,19 +22,20 @@ export default function Privacy() {
         </p>
 
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          https://rokefela.com ("Website", "us", "we", or "our") are
-          committed to protecting your privacy online. We are also
-          committed to providing you with the very best experience we
-          can on our website (the “Website”). In order to enhance your
-          experience on our Website we gather certain personal
-          information about you that helps us customize our content to
-          your tastes and preferences. Please read the following
-          Privacy Policy to understand how your personal information
-          will be treated as you make full use of our Website.
+          https://rokefela.com (&quot;Website&quot;, &quot;us&quot;,
+          &quot;we&quot;, or &quot;our&quot;) are committed to
+          protecting your privacy online. We are also committed to
+          providing you with the very best experience we can on our
+          website (the “Website”). In order to enhance your experience
+          on our Website we gather certain personal information about
+          you that helps us customize our content to your tastes and
+          preferences. Please read the following Privacy Policy to
+          understand how your personal information will be treated as
+          you make full use of our Website.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We operate the Website and other related websites and
-          applications (the "Service").
+          applications (the &quot;Service&quot;).
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           This page informs you of our policies regarding the
@@ -76,7 +77,8 @@ export default function Privacy() {
           Cookies
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          Cookies are small pieces of data stored on a User's device.
+          Cookies are small pieces of data stored on a User&apos;s
+          device.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Data Controller
@@ -136,8 +138,9 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           While using our Service, we may ask you to provide us with
           certain personally identifiable information that can be used
-          to contact or identify you ("Personal Data"). Personally
-          identifiable information may include, but is not limited to:
+          to contact or identify you (&quot;Personal Data&quot;).
+          Personally identifiable information may include, but is not
+          limited to:
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Email address First name and last name Phone number Address,
@@ -155,11 +158,12 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We may also collect information that your browser sends
           whenever you visit our Service or when you access the
-          Service by or through a mobile device ("Usage Data").
+          Service by or through a mobile device (&quot;Usage
+          Data&quot;).
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           This Usage Data may include information such as your
-          computer's Internet Protocol address (e.g. IP address),
+          computer&apos;s Internet Protocol address (e.g. IP address),
           browser type, browser version, the pages of our Service that
           you visit, the time and date of your visit, the time spent
           on those pages, unique device identifiers and other
@@ -178,9 +182,9 @@ export default function Privacy() {
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We may use and store information about your location if you
-          give us permission to do so ("Location Data"). We use this
-          data to provide features of our Service, to improve and
-          customize our Service.
+          give us permission to do so (&quot;Location Data&quot;). We
+          use this data to provide features of our Service, to improve
+          and customize our Service.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           You can enable or disable location services when you use our
@@ -284,9 +288,9 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           If you share our content through social media, for example
           by liking us on Facebook, following or tweeting about us on
-          Twitter, or giving us a '+1' via Google Plus, those social
-          networks will record that you have done so and may set a
-          cookie for this purpose.
+          Twitter, or giving us a &apos;+1&apos; via Google Plus,
+          those social networks will record that you have done so and
+          may set a cookie for this purpose.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           In some cases, where a page on our Website includes content
@@ -314,8 +318,8 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Our Website utilizes the Conversion Tracking Pixel service
           of Facebook. This tool allows us to follow the actions of
-          users after they are redirected to a provider's Website by
-          clicking on a Facebook advertisement. We are thus able to
+          users after they are redirected to a provider&apos;s Website
+          by clicking on a Facebook advertisement. We are thus able to
           record the efficiency of Facebook advertisements for
           statistical and market research purposes. The collected data
           remain anonymous and we cannot see the personal data of any
@@ -344,7 +348,7 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           You acknowledge and agree that this Website uses YouTube API
           Services. By accessing and/or using the Website, You agree
-          to YouTube's Terms of Service and the YouTube Privacy
+          to YouTube&apos;s Terms of Service and the YouTube Privacy
           Policy.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
@@ -442,12 +446,12 @@ export default function Privacy() {
           we cannot guarantee its absolute security.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          "Do Not Track" Signals
+          &quot;Do Not Track&quot; Signals
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          We do not support Do Not Track ("DNT"). Do Not Track is a
-          preference you can set in your web browser to inform
-          websites that you do not want to be tracked.
+          We do not support Do Not Track (&quot;DNT&quot;). Do Not
+          Track is a preference you can set in your web browser to
+          inform websites that you do not want to be tracked.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           You can enable or disable Do Not Track by visiting the
@@ -493,9 +497,10 @@ export default function Privacy() {
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We may employ third party companies and individuals to
-          facilitate our Service ("Service Providers"), to provide the
-          Service on our behalf, to perform Service-related services
-          or to assist us in analyzing how our Service is used.
+          facilitate our Service (&quot;Service Providers&quot;), to
+          provide the Service on our behalf, to perform
+          Service-related services or to assist us in analyzing how
+          our Service is used.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           These third parties have access to your Personal Data only
@@ -567,7 +572,7 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Our Service may contain links to other websites that are not
           operated by us. If you click on a third-party link, you will
-          be directed to that third party's website. We strongly
+          be directed to that third party&apos;s website. We strongly
           advise you to review the Privacy Policy of every site you
           visit.
         </p>
@@ -577,11 +582,11 @@ export default function Privacy() {
           websites or services.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
-          Children's Privacy
+          Children&apos;s Privacy
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           Our Service does not address anyone under the age of 18
-          ("Children").
+          (&quot;Children&quot;).
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We do not knowingly collect personally identifiable
@@ -604,8 +609,8 @@ export default function Privacy() {
         <p className="py-1 font-sans text-base tracking-wide text-white">
           We will let you know via email and/or a prominent notice on
           our Service, prior to the change becoming effective and
-          update the "effective date" at the top of this Privacy
-          Policy.
+          update the &quot;effective date&quot; at the top of this
+          Privacy Policy.
         </p>
         <p className="py-1 font-sans text-base tracking-wide text-white">
           You are advised to review this Privacy Policy periodically
