@@ -39,7 +39,6 @@ export default function FreeBeats() {
         })
       });
       const datas = await response.json();
-      console.log(datas);
       if (datas.status >= 400) {
         setStatus(datas.status);
         setMessage("Error joining the newsletter. Try again later.");
