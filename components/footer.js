@@ -76,9 +76,10 @@ const footerData = [
   }
 ];
 
-const FooterCopyright = () => {
+const FooterCopyright = ({ linksHidden }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-y-4 bg-brand bg-opacity-[45%] px-5 py-20 text-center md:py-6 lg:flex-row lg:justify-between">
+    <div
+      className={`flex flex-col items-center justify-center gap-y-4 bg-brand ${linksHidden ? "absolute bottom-0 w-full bg-opacity-[0%]" : "relative bg-opacity-[45%]"} px-5 py-20 text-center md:py-6 lg:flex-row lg:justify-between`}>
       <div className="font-mono text-sm tracking-wider text-white hover:underline lg:ml-6">
         <Link href="/terms-and-conditions">TERMS AND CONDITIONS</Link>
       </div>
@@ -97,64 +98,68 @@ const FooterCopyright = () => {
   );
 };
 
-export default function Footer(props) {
-  return (
-    <footer className="bg-rokefelaBlack">
-      <AnimationOnScroll
-        animateIn="fadeInUp"
-        animateOnce
-        duration={0.7}
-        offset={50}>
-        <div className="sm:pt-30 pt-20">
-          {/* Footer social links */}
-          <div className="mb-12 flex flex-col items-center justify-center px-5 sm:mb-28 md:px-20">
-            <div className="flex w-full flex-wrap gap-4 text-center sm:gap-6">
-              {footerData &&
-                footerData.map((link, i) => (
-                  <div
-                    key={i}
-                    className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
-                    {link.title && (
-                      <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
-                        {link.title}
-                      </h4>
-                    )}
-
+export default function Footer({ linksHidden }) {
+  if (linksHidden) {
+    return <FooterCopyright linksHidden={linksHidden} />;
+  } else {
+    return (
+      <footer className="bg-rokefelaBlack">
+        <AnimationOnScroll
+          animateIn="fadeInUp"
+          animateOnce
+          duration={0.7}
+          offset={50}>
+          <div className="sm:pt-30 pt-20">
+            {/* Footer social links */}
+            <div className="mb-12 flex flex-col items-center justify-center px-5 sm:mb-28 md:px-20">
+              <div className="flex w-full flex-wrap gap-4 text-center sm:gap-6">
+                {footerData &&
+                  footerData.map((link, i) => (
                     <div
-                      className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
-                      {link.links &&
-                        link.links.map((el, i) => (
-                          <a
-                            key={i}
-                            href={el.href}
-                            target={el.target}
-                            className={`flex cursor-pointer items-center justify-center font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage} ${el.icon ?? "py-3"}`}>
-                            {el.image ? (
-                              <Image
-                                src={el.icon}
-                                alt="X"
-                                width={el.styleATag ? "192" : "28"}
-                                height={el.styleATag ? "192" : "28"}
-                                className={`mx-4 text-xl sm:text-2xl md:text-3xl ${el.styleATag ?? el.styleATag}`}
-                              />
-                            ) : el.text ? (
-                              el.text
-                            ) : (
-                              <i className="mx-4 text-3xl">
-                                {el.icon}
-                              </i>
-                            )}
-                          </a>
-                        ))}
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
+                      key={i}
+                      className="mb-12 flex w-full flex-col md:w-[calc(50%-1.5rem/2)] lg:mb-0 lg:w-[calc(25%-1.5rem*3/4)]">
+                      {link.title && (
+                        <h4 className="mb-8 font-serif text-xl leading-5 tracking-wider text-white lg:text-2xl lg:leading-6">
+                          {link.title}
+                        </h4>
+                      )}
 
-          <FooterCopyright />
-        </div>
-      </AnimationOnScroll>
-    </footer>
-  );
+                      <div
+                        className={`flex w-full items-center justify-center ${link.links[0].text ? "flex-col" : "flex-row"}`}>
+                        {link.links &&
+                          link.links.map((el, i) => (
+                            <a
+                              key={i}
+                              href={el.href}
+                              target={el.target}
+                              className={`flex cursor-pointer items-center justify-center font-mono text-sm uppercase tracking-wider tracking-wider text-white text-white hover:underline ${el.styleImage ?? el.styleImage} ${el.icon ?? "py-3"}`}>
+                              {el.image ? (
+                                <Image
+                                  src={el.icon}
+                                  alt="X"
+                                  width={el.styleATag ? "192" : "28"}
+                                  height={el.styleATag ? "192" : "28"}
+                                  className={`mx-4 text-xl sm:text-2xl md:text-3xl ${el.styleATag ?? el.styleATag}`}
+                                />
+                              ) : el.text ? (
+                                el.text
+                              ) : (
+                                <i className="mx-4 text-3xl">
+                                  {el.icon}
+                                </i>
+                              )}
+                            </a>
+                          ))}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            <FooterCopyright />
+          </div>
+        </AnimationOnScroll>
+      </footer>
+    );
+  }
 }

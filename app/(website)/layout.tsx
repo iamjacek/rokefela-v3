@@ -2,10 +2,11 @@ import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
+import { headers } from 'next/headers';
 
 async function sharedMetaData(params) {
   const settings = await getSettings();
-
+  
   return {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
@@ -54,12 +55,18 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Layout({ children, params }) {
-
+  const headersList = headers();
+  const header_url = headersList.get('x-url') || "";
+  let linksHidden = false;
+  if (header_url?.includes("8freebeats")) {
+    linksHidden = true
+  }
+  
   return (
     <>
       <Navbar />
       <div>{children}</div>
-      <Footer/>
+      <Footer linksHidden={linksHidden}/>
     </>
   );
 }

@@ -69,27 +69,25 @@ export default function FreeBeats() {
 
   return (
     <>
-      <Container className="mx-auto bg-rokefelaBlack">
+      <Container className="relative mx-auto bg-rokefelaBlack">
         <div className="h-[92px]"></div>
         <article className="imageOverlayFreeBeats relative bg-[url(/img/rapper.jpeg)] bg-cover bg-[20%] bg-no-repeat sm:bg-left-top">
-          <div className="z-1 relative pb-32 md:pb-44 xl:pb-56">
+          <div className="z-1 relative pb-72">
             <div className="mb-16 bg-brand bg-opacity-[45%] px-4 py-8 sm:px-8 xl:py-10">
               <h1 className="z-0 w-full text-center font-serif text-3xl uppercase tracking-wider text-white md:text-6xl xl:text-7xl">
                 8 FREE FOR PROFIT BEATS
               </h1>
             </div>
             <div className="mx-auto my-8 max-w-5xl px-4 text-base text-white sm:px-8 lg:max-w-xl">
-              <p className="pb-8 font-bold">
+              <p className="pb-8 text-xl">
                 Perform, stream, sell, promote, drop album & EARN
                 MONEY on all digital platforms like: SPOTIFY, APPLE
                 MUSIC, iTUNES, YOUTUBE etc.
               </p>
-              <p className="pb-16 font-bold">
+              <p className="pb-16 text-xl">
                 DO WHATEVER YOU WANT 😈 FOR FREE.
               </p>
-              <p className="font-bold text-[18px]">
-                DOWNLOAD THEM BELOW👇
-              </p>
+              <p className="text-2xl">DOWNLOAD THEM BELOW👇</p>
             </div>
             <Formik
               initialValues={{
@@ -106,7 +104,7 @@ export default function FreeBeats() {
                     type="text"
                     name="name"
                     className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4"
-                    placeholder="James"
+                    placeholder=""
                     autoComplete="off"
                   />
                   <p className="text-left text-white">
@@ -117,7 +115,7 @@ export default function FreeBeats() {
                     type="email"
                     name="email"
                     className="relative mb-4 mt-1 w-full grow border-2 bg-transparent bg-white px-4 py-4 text-[18px] text-rokefelaBlack outline-none outline-none placeholder:text-gray-700 focus:ring-4"
-                    placeholder="james@mail.com"
+                    placeholder=""
                     autoComplete="off"
                   />
 
