@@ -52,10 +52,10 @@ export default function FreeBeats() {
       setRun(true);
       setTimeout(() => {
         setTotalCounts(0);
-        setMessage("");
-        resetForm();
+        //setMessage("");
+        //resetForm();
         setButtonDisabled(false);
-        setIsOpen(false);
+        //setIsOpen(false);
       }, 5000);
       setTotalCounts(400);
     } catch (error) {
