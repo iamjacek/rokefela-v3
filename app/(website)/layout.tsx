@@ -61,10 +61,10 @@ export default async function Layout({ children, params }) {
   if (header_url?.includes("8freebeats")) {
     linksHidden = true
   }
-  
+
   return (
     <>
-      <Navbar />
+      <Navbar linksHidden={linksHidden}/>
       <div>{children}</div>
       <Footer linksHidden={linksHidden}/>
     </>

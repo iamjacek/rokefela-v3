@@ -70,11 +70,10 @@ export default function FreeBeats() {
   return (
     <>
       <Container className="relative mx-auto bg-rokefelaBlack">
-        <div className="h-[92px]"></div>
         <article className="imageOverlayFreeBeats relative bg-[url(/img/rapper.jpeg)] bg-cover bg-[20%] bg-no-repeat sm:bg-left-top">
           <div className="z-1 relative pb-72">
             <div className="mb-16 bg-brand bg-opacity-[45%] px-4 py-8 sm:px-8 xl:py-10">
-              <h1 className="z-0 w-full text-center font-serif text-3xl uppercase tracking-wider text-white md:text-6xl xl:text-7xl">
+              <h1 className="z-0 w-full pt-[80px] text-center font-serif text-3xl uppercase tracking-wider text-white md:text-6xl lg:pt-0 xl:text-7xl">
                 8 FREE FOR PROFIT BEATS
               </h1>
             </div>
