@@ -20,8 +20,8 @@ const footerData = [
     links: [
       {
         text: "8 Free for profit beats",
-        href: "https://mailchi.mp/3bc001c74959/8freebeats",
-        target: "_blank"
+        href: "/8freebeats",
+        target: "_self"
       },
       {
         text: "20 Detroit Beat Bundle",
@@ -50,7 +50,7 @@ const footerData = [
       },
       {
         icon: "/img/x.svg",
-        href: "https://x.com/rokefela",
+        href: "https://x.com/rokefela_?s=21&t=FRqm8kjxE5YkLrbEB-k0Yg",
         target: "_blank",
         image: true
       },
