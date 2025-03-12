@@ -471,3 +471,7 @@ a.menuItem:hover::before {
     transform: translate3d(0, 100%, 0);
   }
 }
+
+#faq p {
+  margin-top: 16px;
+}
