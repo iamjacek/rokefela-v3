@@ -27,11 +27,6 @@ const footerData = [
         text: "20 Detroit Beat Bundle",
         href: "https://dth.rokefela.com/",
         target: "_blank"
-      },
-      {
-        text: "350k+ YT Channel",
-        href: "https://www.youtube.com/channel/UCj4EkDhY1wwKmyZauI9NQfw?sub_confirmation=1",
-        target: "_blank"
       }
     ]
   },
