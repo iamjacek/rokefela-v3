@@ -94,7 +94,7 @@ const Testimonials = ({ testimonials }) => {
         duration={0.7}
         offset={50}>
         <h1 className="z-0 w-full py-20 pt-5 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
-          NUMBERS DON'T LIE:
+          NUMBERS DON&apos;T LIE:
         </h1>
         <h4 className="pb-5 text-center font-serif text-2xl uppercase tracking-wider text-white">
           Over 6.5 Million views and streams behind my beats
