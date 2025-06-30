@@ -96,17 +96,17 @@ const Testimonials = ({ testimonials }) => {
         <h1 className="z-0 w-full px-5 py-20 pt-5 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
           NUMBERS DON&apos;T LIE:
         </h1>
-        <h4 className="px-5 pb-5 text-center font-serif text-2xl uppercase tracking-wider text-white">
-          Over 6.5 Million views and streams behind my beats
+        <h4 className="px-5 pb-5 text-center font-serif text-xl uppercase tracking-wider text-white">
+          - Over 6.5 Million views and streams behind my beats
         </h4>
-        <h4 className="px-5 pb-5 text-center font-serif text-2xl uppercase tracking-wider text-white">
-          12+ years of experience
+        <h4 className="px-5 pb-5 text-center font-serif text-xl uppercase tracking-wider text-white">
+          - 12+ years of experience
         </h4>
-        <h4 className="px-5 pb-5 text-center font-serif text-2xl uppercase tracking-wider text-white">
-          Over 400 industry quality beats on Beatstars
+        <h4 className="px-5 pb-5 text-center font-serif text-xl uppercase tracking-wider text-white">
+          - Over 400 industry quality beats on Beatstars
         </h4>
-        <h4 className="px-5 pb-20 text-center font-serif text-2xl uppercase tracking-wider text-white">
-          Hunreds collaborations with independent rappers and
+        <h4 className="px-5 pb-20 text-center font-serif text-xl uppercase tracking-wider text-white">
+          - Hunreds collaborations with independent rappers and
           producers
         </h4>
       </AnimationOnScroll>
@@ -158,25 +158,17 @@ const Testimonials = ({ testimonials }) => {
               </div>
             ))}
           </div>
+          <div className="mx-auto my-20 w-full max-w-3xl px-5">
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/track/7N1dkzOpe4zFDarpFnLiWv?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              allowFullScreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
         </AnimationOnScroll>
-      </div>
-      <div className="relative flex w-full flex-col items-center justify-center bg-brand bg-opacity-[45%] px-10 py-12">
-        <iframe
-          className="yt-video"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/3FIvSm784uo?si=2Wl9sEkcJQ1rGzfp"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen></iframe>
-        <h3 className="mt-6 inline text-3xl text-white">
-          &quot;BE YOU&quot; on BET AWARDS 2024
-        </h3>
-        <p className="inline text-xl text-white">
-          by VanVan & Heiress Harris (prod. Rokefela)
-        </p>
       </div>
     </section>
   ];

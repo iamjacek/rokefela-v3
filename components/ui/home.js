@@ -13,6 +13,7 @@ import About from "@/components/about";
 import Contact from "@/components/contact";
 import Banner from "@/components/banner";
 import Popup from "@/components/popup";
+import Beyou from "@/components/beyou";
 
 export default function Home({
   hero,
@@ -36,6 +37,7 @@ export default function Home({
         {hero && <Banner hero={hero} playerRef={playerRef} />}
 
         {hero && <Hero hero={hero} playerRef={playerRef} />}
+        <Beyou />
         <Player ref={playerRef} />
         <Payment />
         <HowToBuy />

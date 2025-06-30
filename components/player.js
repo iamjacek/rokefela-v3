@@ -21,7 +21,7 @@ const Player = forwardRef((props, ref) => {
         <h1 className="z-0 w-full py-20 pb-5 text-center font-serif text-4xl uppercase tracking-wider text-white lg:text-5xl 2xl:text-6xl">
           BEATSTORE
         </h1>
-        <h4 className="pb-20 text-center font-serif text-2xl uppercase tracking-wider text-white">
+        <h4 className="pb-20 text-center font-serif text-xl uppercase tracking-wider text-white">
           BUY 2 GET 1 FREE
         </h4>
       </AnimationOnScroll>
