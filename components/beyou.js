@@ -3,20 +3,16 @@ import Button from "@/components/button";
 import Markdown from "react-markdown";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 const Beyou = ({ playerRef, about }) => {
-  const styles = {
-    width: "100%",
-    textAlign: "center"
-  };
   return (
     <section
-      id="about"
-      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-40">
+      id="beyou"
+      className="flex w-full flex-col items-center justify-center bg-rokefelaBlack px-5 pb-24">
       <AnimationOnScroll
         animateIn="fadeInUp"
         animateOnce
         duration={0.7}
         offset={100}>
-        <div className="relative flex w-full flex-col items-center justify-center bg-rokefelaBlack pt-32">
+        <div className="relative flex w-full flex-col items-center justify-center bg-rokefelaBlack pt-24">
           <iframe
             className="yt-video"
             width="560"
