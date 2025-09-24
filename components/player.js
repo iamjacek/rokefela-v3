@@ -22,7 +22,7 @@ const Player = forwardRef((props, ref) => {
           BEATSTORE
         </h1>
         <h4 className="pb-20 text-center font-serif text-base uppercase tracking-wider text-white lg:text-xl">
-          BUY 2 GET 1 FREE
+          PAY FOR 1, GET 5 (WAV LICENSE) - ENDS SUNDAY⏳
         </h4>
       </AnimationOnScroll>
       <AnimationOnScroll
